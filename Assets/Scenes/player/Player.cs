@@ -4,43 +4,38 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public Transform[] character;
+    public Transform[] avatarsPrefabs;
     Animator animator;
-    private float time;
-    private Transform[] characterInstances;
+    private Transform[] avatarsInstances;
     void Start()
     {
-        time = 0.0f;
-        characterInstances = new Transform[character.Length];
-
-        for(int i = 0; i < character.Length; i++){
-            characterInstances[i] = Instantiate(character[i]);
-            characterInstances[i].parent = transform;
-            characterInstances[i].position += transform.position;
+        avatarsInstances = new Transform[avatarsPrefabs.Length];
+        for(int i = 0; i < avatarsPrefabs.Length; i++){
+            avatarsInstances[i] = Instantiate(avatarsPrefabs[i]);
+            avatarsInstances[i].parent = transform;
+            avatarsInstances[i].position += transform.position;
         }
-        animator = characterInstances[0].GetComponent<Animator>();
+        animator = avatarsInstances[0].GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if( Input.GetKeyDown(KeyCode.DownArrow)){
-            changeCharacter();
+            updatePosition();
+            for (int i = 0; i < avatarsPrefabs.Length; i++){
+                tuor(i);
+            }
         }
     }
-    void changeCharacter(){
-        Transform last = character[0];
-        time += Time.deltaTime;
+    void updatePosition(){
+        Transform last = avatarsPrefabs[0];
+        avatarsPrefabs[0] = avatarsPrefabs[1];
+        avatarsPrefabs[1] = avatarsPrefabs[2];
+        avatarsPrefabs[2] = last;
+        
+    }
 
-        character[0] = character[1];
-        character[1] = character[2];
-        character[2] = last;
-
-
-        for (int i = 0; i < character.Length; i++){
-            characterInstances[i].position = character[i].position + transform.position; 
-        }
-        animator.SetTrigger("go_to_change");
+    void tuor(int i){
+        avatarsInstances[i].position = avatarsPrefabs[i].position + transform.position; 
     }
 }

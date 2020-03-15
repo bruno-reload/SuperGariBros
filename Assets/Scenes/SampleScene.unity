@@ -1076,7 +1076,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1380640156}
   - component: {fileID: 1380640157}
-  - component: {fileID: 1380640158}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1110,29 +1109,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 206a6874570fc098e92a6171d199e081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character:
+  avatarsPrefabs:
   - {fileID: 710288082444200547, guid: 2f0e8597a60758b3687982974282d836, type: 3}
   - {fileID: 4356376791625446938, guid: a28b45d9023c64d8c9b1825344de3881, type: 3}
   - {fileID: 1692309889918448645, guid: 041bd4b773bf086ff82e1c27fa485700, type: 3}
---- !u!95 &1380640158
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1380640155}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: aeb48315174af5433854ff17e0c4e96c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1711833852
 GameObject:
   m_ObjectHideFlags: 0
