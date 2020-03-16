@@ -11,10 +11,7 @@ public class Player : MonoBehaviour{
     public float rot;
     public float rotationAvatars;
     public float distanceAvatars;
-    private float time;
     void Start(){   
-        time = 0.0f;
-
         avatarsInstances = new Transform[avatarsPrefabs.Length];
 
         for(int i = 0; i < avatarsPrefabs.Length; i++){
@@ -25,7 +22,7 @@ public class Player : MonoBehaviour{
             avatarsInstances[i].localRotation = Quaternion.Euler(0.0f,0.0f,rotationAvatars);
 
             avatarsPrefabs[i].localPosition = avatarsInstances[i].localPosition;
-             avatarsPrefabs[i].localRotation = avatarsInstances[i].localRotation;
+            avatarsPrefabs[i].localRotation = avatarsInstances[i].localRotation;
         }
         animator = avatarsInstances[0].GetComponent<Animator>();
         transform.localRotation = Quaternion.Euler(0.0f,0.0f,rot);
@@ -34,10 +31,9 @@ public class Player : MonoBehaviour{
     void Update(){ 
         if( Input.GetKeyDown(KeyCode.DownArrow)){
             updatePosition(); 
-        
-        for (int i = 0; i < avatarsPrefabs.Length; i++){
-            StartCoroutine(tuor(i));
-        }
+            for (int i = 0; i < avatarsPrefabs.Length; i++){
+                StartCoroutine(tuor(i));
+            }
             // animator.SetTrigger("go_to_change");
         } 
     }
@@ -48,10 +44,11 @@ public class Player : MonoBehaviour{
         avatarsPrefabs[2] = last;
     }
     IEnumerator tuor(int i){
-        float x = avatarsInstances[i].localPosition.x;
-        float y = avatarsInstances[i].localPosition.y;
         while(Vector3.Distance(avatarsInstances[i].localPosition, avatarsPrefabs[i].localPosition) > 0.01f){
-            // avatarsInstances[i].localPosition = new Vector3(x,y,0.0f);
+            // if(i == avatarsPrefabs.Length - 1){
+            //     avatarsInstances[i].localPosition = Vector3.Lerp(avatarsInstances[i].localPosition,
+            //     avatarsPrefabs[i].localPosition + new Vector3(10.0f,10.0f,0.0f), speed*Time.deltaTime);
+            // }
             avatarsInstances[i].localPosition = Vector3.Lerp(avatarsInstances[i].localPosition,
             avatarsPrefabs[i].localPosition, speed*Time.deltaTime);
             yield return null;
