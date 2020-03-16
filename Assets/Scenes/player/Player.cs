@@ -7,6 +7,7 @@ public class Player : MonoBehaviour{
     public Transform[] avatarsPrefabs;
     private Vector3 highlightPosition;
     private Animator animator;
+    public float speed;
     public float rot;
     public float rotationAvatars;
     public float distanceAvatars;
@@ -33,9 +34,10 @@ public class Player : MonoBehaviour{
     void Update(){ 
         if( Input.GetKeyDown(KeyCode.DownArrow)){
             updatePosition(); 
-            for (int i = 0; i < avatarsPrefabs.Length; i++){
-                StartCoroutine("tuor",i);
-            }
+        
+        for (int i = 0; i < avatarsPrefabs.Length; i++){
+            StartCoroutine(tuor(i));
+        }
             // animator.SetTrigger("go_to_change");
         } 
     }
@@ -45,9 +47,14 @@ public class Player : MonoBehaviour{
         avatarsPrefabs[1] = avatarsPrefabs[2];
         avatarsPrefabs[2] = last;
     }
-    IEnumerable tuor(int i){
-        Debug.Log("chamou");
-        avatarsInstances[i].localPosition = avatarsPrefabs[i].localPosition;
-        yield return null;
+    IEnumerator tuor(int i){
+        float x = avatarsInstances[i].localPosition.x;
+        float y = avatarsInstances[i].localPosition.y;
+        while(Vector3.Distance(avatarsInstances[i].localPosition, avatarsPrefabs[i].localPosition) > 0.01f){
+            // avatarsInstances[i].localPosition = new Vector3(x,y,0.0f);
+            avatarsInstances[i].localPosition = Vector3.Lerp(avatarsInstances[i].localPosition,
+            avatarsPrefabs[i].localPosition, speed*Time.deltaTime);
+            yield return null;
+        }
     }
 }
