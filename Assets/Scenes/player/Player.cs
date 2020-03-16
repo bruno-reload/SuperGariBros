@@ -2,40 +2,52 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
-{
-    public Transform[] avatarsPrefabs;
-    Animator animator;
+public class Player : MonoBehaviour{
     private Transform[] avatarsInstances;
-    void Start()
-    {
+    public Transform[] avatarsPrefabs;
+    private Vector3 highlightPosition;
+    private Animator animator;
+    public float rot;
+    public float rotationAvatars;
+    public float distanceAvatars;
+    private float time;
+    void Start(){   
+        time = 0.0f;
+
         avatarsInstances = new Transform[avatarsPrefabs.Length];
+
         for(int i = 0; i < avatarsPrefabs.Length; i++){
             avatarsInstances[i] = Instantiate(avatarsPrefabs[i]);
             avatarsInstances[i].parent = transform;
-            avatarsInstances[i].position += transform.position;
+
+            avatarsInstances[i].localPosition = new Vector3( i * distanceAvatars, 0.0f,0.0f);
+            avatarsInstances[i].localRotation = Quaternion.Euler(0.0f,0.0f,rotationAvatars);
+
+            avatarsPrefabs[i].localPosition = avatarsInstances[i].localPosition;
+             avatarsPrefabs[i].localRotation = avatarsInstances[i].localRotation;
         }
         animator = avatarsInstances[0].GetComponent<Animator>();
+        transform.localRotation = Quaternion.Euler(0.0f,0.0f,rot);
     }
 
-    void Update()
-    {
+    void Update(){ 
         if( Input.GetKeyDown(KeyCode.DownArrow)){
-            updatePosition();
+            updatePosition(); 
             for (int i = 0; i < avatarsPrefabs.Length; i++){
-                tuor(i);
+                StartCoroutine("tuor",i);
             }
-        }
+            // animator.SetTrigger("go_to_change");
+        } 
     }
     void updatePosition(){
         Transform last = avatarsPrefabs[0];
         avatarsPrefabs[0] = avatarsPrefabs[1];
         avatarsPrefabs[1] = avatarsPrefabs[2];
         avatarsPrefabs[2] = last;
-        
     }
-
-    void tuor(int i){
-        avatarsInstances[i].position = avatarsPrefabs[i].position + transform.position; 
+    IEnumerable tuor(int i){
+        Debug.Log("chamou");
+        avatarsInstances[i].localPosition = avatarsPrefabs[i].localPosition;
+        yield return null;
     }
 }
