@@ -57,7 +57,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scenes\background\Scroll.cs" />
      <Compile Include="Assets\Scenes\player\Player.cs" />
-     <Compile Include="Assets\Scenes\trash\Spown.cs" />
+     <Compile Include="Assets\Scenes\Spown.cs" />
      <Compile Include="Assets\Scenes\trash\Trash.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/home/bruno-mint/Modelos/SuperGariBros/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
