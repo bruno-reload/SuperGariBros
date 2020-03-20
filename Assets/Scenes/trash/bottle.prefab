@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8249588181236510698}
   - component: {fileID: 1449561074550480472}
   - component: {fileID: 9069474893074761077}
+  - component: {fileID: 7312118604158307733}
   m_Layer: 0
   m_Name: bottle
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 14411166358543049}
   m_LocalRotation: {x: -0, y: -0, z: 0.9771885, w: -0.21237376}
-  m_LocalPosition: {x: 17.698076, y: 5.101923, z: 0}
+  m_LocalPosition: {x: 14.315063, y: 4.084936, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -95,6 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   able: 1
+  type: 1
 --- !u!61 &9069474893074761077
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -121,3 +123,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.4}
   m_EdgeRadius: 0
+--- !u!50 &7312118604158307733
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14411166358543049}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

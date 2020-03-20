@@ -4,11 +4,15 @@ using UnityEngine;
 public class Scroll : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Transform[] streets;
+    public float speed;
     private Renderer back;
     private float vel;
     private string nomeBack;
 
-    private void Start() {
+    private void Start()
+    {
+        speed = 2;
         back = GetComponent<Renderer>();
         vel = 0.0f;
         nomeBack = tag;
@@ -19,15 +23,15 @@ public class Scroll : MonoBehaviour
         switch (nomeBack)
         {
             case "background":
-                vel = 0.04f;
+                vel = speed * 0.02f;
                 break;
             case "foreground":
-                vel = 0.02f;
+                vel = speed * 0.01f;
                 break;
             case "street":
-                vel = 0.05f;
+                vel = speed * 0.025f;
                 break;
-        }   
+        }
         Vector2 offset = new Vector2(vel * Time.deltaTime, 0);
         back.material.mainTextureOffset += offset;
     }

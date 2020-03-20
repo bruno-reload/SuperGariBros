@@ -4,69 +4,80 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private Transform[] avatarsInstances;
-    public Transform[] avatarsPrefabs;
-    private Vector3 highlightPosition;
-    private Animator animator;
-    public float speed;
-    public float rot;
-    public float rotationAvatars;
-    public float distanceAvatars;
-    void Start()
+    public TrashType combine;
+    private float lerpSpeed = 5.0f;
+    // Start is called before the first frame update
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        avatarsInstances = new Transform[avatarsPrefabs.Length];
-
-        for (int i = 0; i < avatarsPrefabs.Length; i++)
+        if (combine == other.GetComponent<Trash>().type)
         {
-            avatarsInstances[i] = Instantiate(avatarsPrefabs[i]);
-
-            float r = distanceAvatars * i;
-            float d = rotationAvatars * Mathf.Deg2Rad;
-
-            avatarsInstances[i].position = transform.position + new Vector3(
-            r * Mathf.Cos(d) - r * Mathf.Sin(d),
-            r * Mathf.Sin(d) + r * Mathf.Cos(d), 0.0f);
-
-            avatarsPrefabs[i].localPosition = avatarsInstances[i].localPosition;
-            avatarsPrefabs[i].localRotation = avatarsInstances[i].localRotation;
+            point();
         }
-        animator = avatarsInstances[0].GetComponent<Animator>();
-        transform.localRotation = Quaternion.Euler(0.0f, 0.0f, rot);
-    }
-    public Transform[] getAvatarsInstances()
-    {
-        return this.avatarsInstances;
-    }
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        else
         {
-            updatePosition();
-            for (int i = 0; i < avatarsPrefabs.Length; i++)
-            {
-                StartCoroutine(tuor(i));
-            }
-            // animator.SetTrigger("go_to_change");
+            StartCoroutine("colliderBar");
         }
     }
-    void updatePosition()
+    IEnumerator colliderBar()
     {
-        Transform last = avatarsPrefabs[0];
-        avatarsPrefabs[0] = avatarsPrefabs[1];
-        avatarsPrefabs[1] = avatarsPrefabs[2];
-        avatarsPrefabs[2] = last;
-    }
-    IEnumerator tuor(int i)
-    {
-        while (Vector3.Distance(avatarsInstances[i].localPosition, avatarsPrefabs[i].localPosition) > 0.01f)
+        Color col = GetComponent<Renderer>().material.color;
+        Color RawImagecol = GameObject.Find("Canvas/lifeBar/life").GetComponent<UnityEngine.UI.RawImage>().color;
+
+        float x = GameObject.Find("Canvas/lifeBar/life").GetComponent<RectTransform>().localScale.x;
+        float newX = x - 0.05f;
+        
+        GameObject.Find("Canvas/lifeBar/life").GetComponent<UnityEngine.UI.RawImage>().color = Color.red;
+        GetComponent<Renderer>().material.color = Color.red;
+        yield return new WaitForSeconds(0.05f);
+
+        GameObject.Find("Canvas/lifeBar/life").GetComponent<UnityEngine.UI.RawImage>().color = Color.white;
+        GetComponent<Renderer>().material.color = Color.white;
+        yield return new WaitForSeconds(0.1f);
+
+        GameObject.Find("Canvas/lifeBar/life").GetComponent<UnityEngine.UI.RawImage>().color = RawImagecol;
+        GetComponent<Renderer>().material.color = col;
+
+        while (newX < x & x > 0)
         {
-            // if(i == avatarsPrefabs.Length - 1){
-            //     avatarsInstances[i].localPosition = Vector3.Lerp(avatarsInstances[i].localPosition,
-            //     avatarsPrefabs[i].localPosition + new Vector3(10.0f,10.0f,0.0f), speed*Time.deltaTime);
-            // }
-            avatarsInstances[i].localPosition = Vector3.Lerp(avatarsInstances[i].localPosition,
-            avatarsPrefabs[i].localPosition, speed * Time.deltaTime);
+            float distance = lerpSpeed / x;
+            x = Mathf.Lerp(x, x - 0.05f, 0.5f);
+            (GameObject.Find("Canvas/lifeBar/life").GetComponent<RectTransform>() as RectTransform).localScale = new Vector2(x, 1.0f);
             yield return null;
         }
+
+        if (x < 0.05f)
+        {
+            Debug.Log("you die");
+        }
+    }
+    void point()
+    {
+        UnityEngine.UI.Text textArea = GameObject.Find("Canvas/pointBar/value").GetComponent<UnityEngine.UI.Text>();
+        int val = int.Parse(textArea.text);
+        val++;
+        textArea.text = val.ToString();
+        StartCoroutine("scaleOut");
+    }
+
+    IEnumerator scaleOut()
+    {
+        GameObject value = GameObject.Find("Canvas/pointBar/value");
+
+        float x = value.GetComponent<RectTransform>().localScale.x;
+        float y = value.GetComponent<RectTransform>().localScale.y;
+
+        Vector2 scaleDefault = new Vector2(x, y);
+        Vector2 bigScale = new Vector2(1.3f, 1.3f);
+        float distance = Vector2.Distance(bigScale, scaleDefault) / x;
+
+        value.GetComponent<RectTransform>().localScale = bigScale;
+
+        while (Vector2.Distance(bigScale, scaleDefault) > 0.01f)
+        {
+            value.GetComponent<RectTransform>().localScale = Vector2.Lerp(value.GetComponent<RectTransform>().localScale, scaleDefault, Time.deltaTime * distance);
+            yield return null;
+        }
+        StopCoroutine("scaleOut");
     }
 }
