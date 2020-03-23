@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public TrashType combine;
-    private float lerpSpeed = 5.0f;
+    private float lerpSpeed = SpeedControl.speed;
     // Start is called before the first frame update
 
     private void OnTriggerEnter2D(Collider2D other)

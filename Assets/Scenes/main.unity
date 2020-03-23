@@ -242,8 +242,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fbaa6a7943b56807a1b319819646972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  streets: []
-  speed: 2
 --- !u!64 &54398891
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -490,8 +488,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fbaa6a7943b56807a1b319819646972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  streets: []
-  speed: 0
 --- !u!114 &326569566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -731,8 +727,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fbaa6a7943b56807a1b319819646972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  streets: []
-  speed: 0
 --- !u!1 &552340685
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,8 +773,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fbaa6a7943b56807a1b319819646972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  streets: []
-  speed: 2
 --- !u!64 &552340688
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -994,8 +986,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fbaa6a7943b56807a1b319819646972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  streets: []
-  speed: 2
 --- !u!64 &655883732
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1182,8 +1172,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fbaa6a7943b56807a1b319819646972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  streets: []
-  speed: 2
 --- !u!64 &950999348
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1277,8 +1265,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18.51, y: 0.0000030994}
-  m_SizeDelta: {x: 73.92, y: 20}
+  m_AnchoredPosition: {x: 27.73499, y: 0.0000030994}
+  m_SizeDelta: {x: 55.47, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1007186364
 MonoBehaviour:
@@ -1428,7 +1416,7 @@ GameObject:
   m_Layer: 0
   m_Name: SR
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1463,8 +1451,6 @@ MonoBehaviour:
   - {fileID: 6801663338074992413, guid: 5ad38ce685c7f481bb55d7660b032086, type: 3}
   - {fileID: 1352666590513587489, guid: b49fb7d7ca2f3711d9af85a71f76d240, type: 3}
   spawnPlayer: {fileID: 1380640157}
-  globalSpeed: {fileID: 552340687}
-  speed: 2
   spownRot: 0
   rotationRubbish: 290
   distanceRubbish: 2
@@ -1635,8 +1621,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fbaa6a7943b56807a1b319819646972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  streets: []
-  speed: 2
 --- !u!64 &1212959327
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1950,7 +1934,7 @@ GameObject:
   m_Layer: 0
   m_Name: SP
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1984,7 +1968,6 @@ MonoBehaviour:
   - {fileID: 710288082444200547, guid: 2f0e8597a60758b3687982974282d836, type: 3}
   - {fileID: 4356376791625446938, guid: a28b45d9023c64d8c9b1825344de3881, type: 3}
   - {fileID: 1692309889918448645, guid: 041bd4b773bf086ff82e1c27fa485700, type: 3}
-  speed: 2
   spawnRot: 0
   rotationAvatars: 290
   distanceAvatars: 2
@@ -2064,6 +2047,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389671750}
   m_CullTransparentMesh: 0
+--- !u!1 &1480368407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1480368409}
+  - component: {fileID: 1480368408}
+  m_Layer: 0
+  m_Name: SpeedControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1480368408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480368407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918a53ba57cd6e2188333c312b80a238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  difficulty: 5
+--- !u!4 &1480368409
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480368407}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.805816, y: 0.14163192, z: -25.074219}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1594962771
 GameObject:
   m_ObjectHideFlags: 0
@@ -2279,8 +2306,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fbaa6a7943b56807a1b319819646972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  streets: []
-  speed: 2
 --- !u!64 &1711833855
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2554,8 +2579,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -34.32, y: 0}
-  m_SizeDelta: {x: 52.54, y: 20}
+  m_AnchoredPosition: {x: -27.53, y: 0}
+  m_SizeDelta: {x: 66.13, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1976481668
 MonoBehaviour:
@@ -2590,10 +2615,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Km:
-
-
-'
+  m_Text: 'Distance:'
 --- !u!222 &1976481669
 CanvasRenderer:
   m_ObjectHideFlags: 0

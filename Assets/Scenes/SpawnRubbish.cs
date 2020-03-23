@@ -8,8 +8,7 @@ public class SpawnRubbish : MonoBehaviour
     private Transform[] rubbishInstance;
     private Vector3[] avatarBuff;
     public SpawnPlayer spawnPlayer;
-    public Scroll globalSpeed;
-    public float speed;
+    private float speed = SpeedControl.speed;
     public float spownRot;
     public float rotationRubbish;
     public float distanceRubbish;
@@ -52,7 +51,7 @@ public class SpawnRubbish : MonoBehaviour
     }
     void Update()
     {
-        speed = globalSpeed.speed;
+        speed = SpeedControl.speed;
         for (int i = 0; i < rubbishInstance.Length; i++)
         {
             if (rubbishInstance[i].gameObject.activeInHierarchy & rubbishInstance[i].GetComponent<Trash>().able)
@@ -60,7 +59,6 @@ public class SpawnRubbish : MonoBehaviour
                 StartCoroutine(moveToTarget(i));
             }
         }
-        Debug.Log(speed);
     }
 
     void radomizeTarget(int old)

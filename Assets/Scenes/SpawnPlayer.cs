@@ -8,7 +8,8 @@ public class SpawnPlayer : MonoBehaviour
     public Transform[] avatarsPrefabs;
     private Vector3 highlightPosition;
     private Animator animator;
-    public float speed;
+    private bool inAnimation = false;
+    private float speed = SpeedControl.speed;
     public float spawnRot;
     public float rotationAvatars;
     public float distanceAvatars;
@@ -39,7 +40,7 @@ public class SpawnPlayer : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow) && !inAnimation)
         {
             updatePosition();
             for (int i = 0; i < avatarsPrefabs.Length; i++)
@@ -58,7 +59,8 @@ public class SpawnPlayer : MonoBehaviour
     }
     IEnumerator tuor(int i)
     {
-        while (Vector3.Distance(avatarsInstances[i].localPosition, avatarsPrefabs[i].localPosition) > 0.01f)
+        inAnimation = true;
+        while (Vector3.Distance(avatarsInstances[i].localPosition, avatarsPrefabs[i].localPosition) > 0.05f)
         {
             // if(i == avatarsPrefabs.Length - 1){
             //     avatarsInstances[i].localPosition = Vector3.Lerp(avatarsInstances[i].localPosition,
@@ -68,5 +70,6 @@ public class SpawnPlayer : MonoBehaviour
             avatarsPrefabs[i].localPosition, speed * Time.deltaTime);
             yield return null;
         }
+        inAnimation = false;
     }
 }

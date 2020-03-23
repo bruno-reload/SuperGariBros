@@ -55,7 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scenes\PlayMode\SpawnPlayerTest.cs" />
+     <Compile Include="Assets\PlayMode\SpawnPlayerTest.cs" />
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/home/bruno-mint/Unity-2019.1.0f2/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
  </Reference>
@@ -638,6 +638,12 @@
  <Reference Include="mscorlib">
  <HintPath>/home/bruno-mint/Unity-2019.1.0f2/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="SpawnPlayerReference.csproj">
+      <Project>{076108CD-2928-B76F-4E16-CAA963C6EC44}</Project>
+      <Name>SpawnPlayerReference</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
