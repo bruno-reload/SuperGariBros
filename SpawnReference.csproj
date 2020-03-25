@@ -61,6 +61,10 @@
      <Compile Include="Assets\Scenes\SpawnRubbish.cs" />
      <Compile Include="Assets\Scenes\SpeedControl.cs" />
      <Compile Include="Assets\Scenes\trash\Trash.cs" />
+     <Compile Include="Assets\Scenes\ui\ButtonControll.cs" />
+     <Compile Include="Assets\Scenes\ui\DistanceCount.cs" />
+     <Compile Include="Assets\Scenes\ui\LifeControll.cs" />
+     <Compile Include="Assets\Scenes\ui\Points.cs" />
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/home/bruno-mint/Unity-2019.1.0f2/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
  </Reference>

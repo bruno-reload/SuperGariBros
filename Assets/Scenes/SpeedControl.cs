@@ -7,7 +7,6 @@ public class SpeedControl : MonoBehaviour
     static public float speed = 5.0f;
     public float difficulty;
 
-    private UnityEngine.UI.Text speedUI;
     private float difficultyControll;
     private float count = 0.0f;
     public float Difficulty
@@ -18,7 +17,6 @@ public class SpeedControl : MonoBehaviour
 
     private void Start()
     {
-        speedUI = GameObject.Find("Canvas/KmBar/value").GetComponent<UnityEngine.UI.Text>();
     }
     private void Update()
     {
@@ -28,7 +26,6 @@ public class SpeedControl : MonoBehaviour
         {
             count = 0.0f;
             speed += 0.01f;
-            speedUI.text = (speed - 5).ToString("F");
         }
 
     }

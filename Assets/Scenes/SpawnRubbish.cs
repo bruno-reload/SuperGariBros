@@ -31,7 +31,7 @@ public class SpawnRubbish : MonoBehaviour
         StartCoroutine("StartLater");
     }
 
-    void setStartPos(int i)
+    private void setStartPos(int i)
     {
         float r = distanceRubbish * i;
         float d = rotationRubbish * Mathf.Deg2Rad;
