@@ -1,29 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class ButtonControll : MonoBehaviour
 {
-    private Material uiMaterial;
-    private Material buffMaterialUi;
-
-    private void Start()
-    {
-        // uiMaterial = GameObject<MeshRenderer>().Material;
-        // buffMaterialUi = uiMaterial;
-    }
+    public PostProcessVolume post;
+    private bool paused = true;
     public void quit()
     {
         Application.Quit();
     }
     public void pause()
     {
-        uiMaterial.color = new Color(
-            (uiMaterial.color.g + uiMaterial.color.r + uiMaterial.color.b) / 3,
-            (uiMaterial.color.g + uiMaterial.color.r + uiMaterial.color.b) / 3,
-            (uiMaterial.color.g + uiMaterial.color.r + uiMaterial.color.b) / 3);
-    }
-    public void resume(){
-        uiMaterial = buffMaterialUi;
+        switch (paused)
+        {
+            case true:
+                post.profile.GetSetting<ColorGrading>().saturation.value = -100.0f;
+                Time.timeScale = 0;
+                paused = false;
+                break;
+            case false:
+                post.profile.GetSetting<ColorGrading>().saturation.value = 0.0f;
+                Time.timeScale = 1.0f;
+                paused = true;
+                break;
+        }
     }
 }

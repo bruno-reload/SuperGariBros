@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6247056688126354564}
   - component: {fileID: 2949928675409959324}
   - component: {fileID: -5342251954689371908}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: banana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
