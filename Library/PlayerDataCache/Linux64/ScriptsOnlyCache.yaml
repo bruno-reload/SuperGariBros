@@ -1,16 +1,8 @@
 ScriptsOnlyBuild:
   usedScripts:
     SpawnReference.dll:
-    - ButtonControll
-    - DistanceCount
-    - LifeControll
-    - Player
-    - Points
-    - Scroll
     - SpawnPlayer
     - SpawnRubbish
-    - SpeedControl
-    - Trash
     Unity.Postprocessing.Runtime.dll:
     - UnityEngine.Rendering.PostProcessing.AmbientOcclusion
     - UnityEngine.Rendering.PostProcessing.AutoExposure
@@ -49,6 +41,19 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Text
     com.unity.multiplayer-hlapi.Runtime.dll:
     - UnityEngine.Networking.NetworkCallbacks
+    player.dll:
+    - Player
+    scroll.dll:
+    - Scroll
+    speedControl.dll:
+    - SpeedControl
+    trash.dll:
+    - Trash
+    ui.dll:
+    - ButtonControll
+    - DistanceCount
+    - LifeControll
+    - Points
   sceneClasses:
     Assets/Scenes/main.unity:
     - Class: 1
@@ -481,7 +486,7 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: SpawnReference.dll
+    assemblyName: ui.dll
     namespaceName: 
     className: Points
   - hash:
@@ -745,7 +750,7 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 2af9814744b232534167252e4a0a340a
-    assemblyName: SpawnReference.dll
+    assemblyName: ui.dll
     namespaceName: 
     className: LifeControll
   - hash:
@@ -931,7 +936,7 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: SpawnReference.dll
+    assemblyName: scroll.dll
     namespaceName: 
     className: Scroll
   - hash:
@@ -1069,7 +1074,7 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: e2f93cc0057f8e1d1511112767390fdd
-    assemblyName: SpawnReference.dll
+    assemblyName: trash.dll
     namespaceName: 
     className: Trash
   - hash:
@@ -1123,7 +1128,7 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: e4136be9fe23a21e30138e18ad9779fe
-    assemblyName: SpawnReference.dll
+    assemblyName: speedControl.dll
     namespaceName: 
     className: SpeedControl
   - hash:
@@ -1165,7 +1170,7 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: SpawnReference.dll
+    assemblyName: ui.dll
     namespaceName: 
     className: DistanceCount
   - hash:
@@ -1195,7 +1200,7 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 28b1119be3bdf030a7450ea0eba654b4
-    assemblyName: SpawnReference.dll
+    assemblyName: ui.dll
     namespaceName: 
     className: ButtonControll
   - hash:
@@ -1237,7 +1242,7 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 791ea8bd3aac39a5a6fc8b7eb5263862
-    assemblyName: SpawnReference.dll
+    assemblyName: player.dll
     namespaceName: 
     className: Player
   - hash:
@@ -1333,4 +1338,4 @@ ScriptsOnlyBuild:
   platform: 24
   scenePathNames:
   - Assets/Scenes/main.unity
-  playerPath: "/home/bruno-mint/\xC1rea de Trabalho/linux_prototype/superGariBros.x86_64"
+  playerPath: "/home/bruno/\xC1rea de Trabalho/superGariBros_linux/sgb.x86_64"
