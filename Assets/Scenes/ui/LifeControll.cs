@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class LifeControll : MonoBehaviour
 {
     public float lerpSpeed;
+    public Transform gameOver;
+    public ButtonControll bt;
+    public GameObject pause;
 
     public IEnumerator lifeBarNotificationCollider()
     {
@@ -34,8 +38,16 @@ public class LifeControll : MonoBehaviour
         }
         if (x < 0.05f)
         {
-            Debug.Log("you die");
+            gameOver.DOMove(new Vector3(), 0.5f);
         }
+
         yield return null;
+    }
+    void Update()
+    {
+        if(DOTween.Complete(gameOver) == 1){
+            bt.pause();
+            pause.SetActive(false);
+        }
     }
 }

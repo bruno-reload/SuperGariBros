@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpeedControl : MonoBehaviour
 {
+    public const float defaultValue = 5.0f;
     static public float speed = 5.0f;
     public float difficulty;
 
@@ -14,7 +15,7 @@ public class SpeedControl : MonoBehaviour
         set { difficultyControll = 1.0f / value; }
         get { return difficultyControll; }
     }
-
+ 
     private void Start()
     {
     }

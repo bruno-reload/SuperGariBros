@@ -58,7 +58,6 @@
      <Compile Include="Assets\Scenes\ui\ButtonControll.cs" />
      <Compile Include="Assets\Scenes\ui\DistanceCount.cs" />
      <Compile Include="Assets\Scenes\ui\LifeControll.cs" />
-     <Compile Include="Assets\Scenes\ui\PainelSlide.cs" />
      <Compile Include="Assets\Scenes\ui\Points.cs" />
  <Reference Include="Unity.Postprocessing.Runtime">
  <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>

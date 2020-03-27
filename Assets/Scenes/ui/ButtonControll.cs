@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.SceneManagement;
 
 public class ButtonControll : MonoBehaviour
 {
@@ -26,5 +27,12 @@ public class ButtonControll : MonoBehaviour
                 paused = true;
                 break;
         }
+    }
+    public void resetLevel()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        Time.timeScale = 1;
+        SceneManager.LoadScene(scene.name);
+        SpeedControl.speed = SpeedControl.defaultValue;
     }
 }
