@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     private GameObject lifeBar;
     private GameObject pointsValue;
     private float lerpSpeed ;
-    // Start is called before the first frame update
+    public bool bottomLane = false;
     private void Start()
     {
         lerpSpeed = SpeedControl.speed;
