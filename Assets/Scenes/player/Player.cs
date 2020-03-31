@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player :ItemPool
 {
     public TrashType combine;
     private GameObject lifeBar;
@@ -23,11 +23,11 @@ public class Player : MonoBehaviour
         }
         else
         {
-            StartCoroutine("playerNotificationCollider");
+            StartCoroutine("PlayerNotificationCollider");
             StartCoroutine(lifeBar.GetComponent<LifeControll>().lifeBarNotificationCollider());
         }
     }
-    private IEnumerator playerNotificationCollider()
+    private IEnumerator PlayerNotificationCollider()
     {
         Color col = GetComponent<Renderer>().material.color;
 

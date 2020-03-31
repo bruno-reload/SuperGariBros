@@ -2,11 +2,12 @@
     "name": "SpawnReference",
     "references": [
         "GUID:d60799ab2a985554ea1a39cd38695018",
-        "GUID:0db46b2b3bcd6a9f4ade530c72f2dfaa",
         "GUID:bf8092d5190518596af0cb580b0a9c7b",
-        "GUID:981f29a8c0d8cd4a19377010d63d706c"
+        "GUID:0db46b2b3bcd6a9f4ade530c72f2dfaa",
+        "GUID:981f29a8c0d8cd4a19377010d63d706c",
+        "GUID:1b61e03e8d57464dbb9b841fb5774091",
+        "GUID:3a0ce6b4b0b7d35d8b9b6a64f06ef673"
     ],
-    "optionalUnityReferences": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
@@ -14,5 +15,6 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": []
+    "versionDefines": [],
+    "noEngineReferences": false
 }

@@ -1,0 +1,4 @@
+/home/bruno/Modelos/SuperGariBros/obj/Debug/player.csprojAssemblyReference.cache
+/home/bruno/Modelos/SuperGariBros/obj/Debug/player.csproj.CoreCompileInputs.cache
+/home/bruno/Modelos/SuperGariBros/obj/Debug/player.dll
+/home/bruno/Modelos/SuperGariBros/obj/Debug/player.pdb

@@ -142,5 +142,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35c1171e2dfb162d8bbd657360b3f0ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  items:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   combine: 2
   bottomLane: 0

@@ -4,95 +4,86 @@ using UnityEngine;
 
 public class SpawnRubbish : MonoBehaviour
 {
-    public Transform[] rubbishPrefab;
-    private Transform[] rubbishInstance;
     private Vector3[] avatarBuff;
     public SpawnPlayer spawnPlayer;
     private float speed = SpeedControl.speed;
     public float spownRot;
     public float rotationRubbish;
     public float distanceRubbish;
+    private int size;
 
-    // Start is called before the first frame update
     void Start()
     {
-        rubbishInstance = new Transform[rubbishPrefab.Length];
-        avatarBuff = new Vector3[rubbishPrefab.Length];
+        size = (PoolControll.trashPool as PoolTrash).Size;
+        avatarBuff = new Vector3[size];
 
         transform.localRotation = Quaternion.Euler(0.0f, 0.0f, spownRot);
 
-        for (int i = 0; i < rubbishPrefab.Length; i++)
+        for (int i = 0; i < size; i++)
         {
-            rubbishInstance[i] = Instantiate(rubbishPrefab[i]);
-
             setStartPos(i);
-
         }
         StartCoroutine("StartLater");
     }
-
+    IEnumerator StartLater()
+    {
+        yield return new WaitForEndOfFrame();
+        for (int i = 0; i < size; i++)
+        {
+            avatarBuff[i] = PoolControll.playerPool.getItem(i).transform.position;
+        }
+        StopCoroutine("StartLater");
+    }
     private void setStartPos(int i)
     {
         float r = distanceRubbish * i;
         float d = rotationRubbish * Mathf.Deg2Rad;
 
-        rubbishInstance[i].position = transform.position + new Vector3(
+        PoolControll.trashPool.getItem(i).transform.position = transform.position + new Vector3(
         r * Mathf.Cos(d) - r * Mathf.Sin(d),
         r * Mathf.Sin(d) + r * Mathf.Cos(d), 0.0f);
-    }
-    IEnumerator StartLater()
-    {
-        yield return new WaitForEndOfFrame();
-        for (int i = 0; i < spawnPlayer.GetComponent<SpawnPlayer>().getAvatarsInstances().Length; i++)
-        {
-            avatarBuff[i] = spawnPlayer.GetComponent<SpawnPlayer>().getAvatarsInstances()[i].position;
-        }
-        StopCoroutine("StartLater");
     }
     void Update()
     {
         speed = SpeedControl.speed;
-        for (int i = 0; i < rubbishInstance.Length; i++)
+        for (int i = 0; i < size; i++)
         {
-            if (rubbishInstance[i].gameObject.activeInHierarchy & rubbishInstance[i].GetComponent<Trash>().able)
+            if (PoolControll.trashPool.getItem(i).Able)
             {
+                PoolControll.trashPool.desable(i);
                 StartCoroutine(moveToTarget(i));
             }
         }
     }
-
-    void radomizeTarget(int old)
-    {
-        int randIndex = Random.Range(0, rubbishInstance.Length);
-
-        Vector3 rubbishBuffer = rubbishInstance[old].transform.position;
-        Vector3 avBuff = avatarBuff[old];
-
-        rubbishInstance[old].transform.position = rubbishInstance[randIndex].transform.position;
-        avatarBuff[old] = avatarBuff[randIndex];
-
-        rubbishInstance[randIndex].transform.position = transform.position + rubbishBuffer;
-        avatarBuff[randIndex] = avBuff;
-    }
-    private void activeRubbishPool()
-    {
-        int i = Random.Range(0, rubbishInstance.Length);
-        rubbishInstance[i].gameObject.SetActive(true);
-    }
     IEnumerator moveToTarget(int i)
     {
-        rubbishInstance[i].GetComponent<Trash>().able = false;
-        while (Vector3.Distance(rubbishInstance[i].transform.position, avatarBuff[i]) > 0.01f)
+        while (!PoolControll.trashPool.getItem(i).Able)
         {
-            float t = (this.speed * Time.deltaTime *0.25f) / Vector3.Distance(rubbishInstance[i].transform.position, avatarBuff[i]);
-            rubbishInstance[i].transform.position = Vector3.Lerp(rubbishInstance[i].transform.position,
-            avatarBuff[i],
-            t);
+            float t = (this.speed * Time.deltaTime * 0.25f) / Vector3.Distance(PoolControll.trashPool.getItem(i).transform.position, avatarBuff[i]);
+            PoolControll.trashPool.getItem(i).transform.position = Vector3.Lerp(PoolControll.trashPool.getItem(i).transform.position, avatarBuff[i], t);
+            if(Vector3.Distance(PoolControll.trashPool.getItem(i).transform.position, avatarBuff[i]) > 0.01f){
+
+            }
             yield return null;
         }
-        rubbishInstance[i].GetComponent<Trash>().able = true;
-
-        activeRubbishPool();
+        //nunca chama essa parte
         radomizeTarget(i);
+        PoolControll.trashPool.enable(Random.Range(0, size));
+
+    }
+    void radomizeTarget(int old)
+    {
+        int randIndex = Random.Range(0, size);
+
+        Vector3 rubbishBuffer = PoolControll.trashPool.getItem(old).transform.position;
+        Vector3 avBuff = avatarBuff[old];
+
+        PoolControll.trashPool.getItem(old).transform.position = PoolControll.trashPool.getItem(randIndex).transform.position;
+        avatarBuff[old] = avatarBuff[randIndex];
+
+        Debug.Log(transform.position);
+        Debug.Log(rubbishBuffer);
+        PoolControll.trashPool.getItem(randIndex).transform.position = transform.position + rubbishBuffer;
+        avatarBuff[randIndex] = avBuff;
     }
 }

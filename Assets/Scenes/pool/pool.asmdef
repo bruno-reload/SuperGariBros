@@ -1,0 +1,17 @@
+{
+    "name": "pool",
+    "references": [
+        "GUID:3a0ce6b4b0b7d35d8b9b6a64f06ef673",
+        "GUID:0db46b2b3bcd6a9f4ade530c72f2dfaa",
+        "GUID:981f29a8c0d8cd4a19377010d63d706c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
