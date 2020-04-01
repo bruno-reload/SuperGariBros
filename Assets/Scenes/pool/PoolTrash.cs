@@ -3,21 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class PoolTrash: Pool<ItemPool>
+public class PoolTrash : Pool<ItemPool>
 {
     private ItemPool[] t;
-    
-    public int Size{
-        set{t = new ItemPool[value];}
-        get{return t.Length;}
-    }
-    public void desable(int index)
+    public int Size
     {
-        t[index].Able = false;
-    }
-    public void enable(int index)
-    {
-        t[index].Able = true;
+        set { t = new ItemPool[value]; }
+        get { return t.Length; }
     }
     public ItemPool[] allItems()
     {
@@ -37,9 +29,21 @@ public class PoolTrash: Pool<ItemPool>
     }
     public void addItems(ItemPool[] items)
     {
-        for(int i =0; i < items.Length;i++)
+        for (int i = 0; i < items.Length; i++)
         {
             t[i] = items[i];
         }
+    }
+
+    public void inside(int index)
+    {
+        t[index].Able = true;
+        t[index].gameObject.SetActive(false);
+    }
+
+    public void outside(int index)
+    {
+        t[index].Able = false;
+        t[index].gameObject.SetActive(true);
     }
 }

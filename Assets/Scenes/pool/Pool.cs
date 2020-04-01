@@ -4,8 +4,8 @@ using UnityEngine;
 using System;
 public interface Pool<ItemPool>
 {
-    void desable(int index);
-    void enable(int index);
+    void inside(int index);
+    void outside(int index);
     ItemPool[] allItems();
     ItemPool getItem(int index);
     void addItems(ItemPool[] items);

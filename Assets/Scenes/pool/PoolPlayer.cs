@@ -10,14 +10,6 @@ public class PoolPlayer : Pool<ItemPool>
         set { t = new ItemPool[value]; }
         get { return t.Length; }
     }
-    public void desable(int index)
-    {
-        t[index].Able = false;
-    }
-    public void enable(int index)
-    {
-        t[index].Able = true;
-    }
     public ItemPool[] allItems()
     {
         return t;
@@ -40,5 +32,15 @@ public class PoolPlayer : Pool<ItemPool>
         {
             t[i] = items[i];
         }
+    }
+
+    public void inside(int index)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void outside(int index)
+    {
+        throw new NotImplementedException();
     }
 }

@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player :ItemPool
+public class Player : ItemPool
 {
     public TrashType combine;
     private GameObject lifeBar;
     private GameObject pointsValue;
-    private float lerpSpeed ;
+    private float lerpSpeed;
     public bool bottomLane = false;
+
+    private IEnumerator p;
+    private IEnumerator l;
+    private IEnumerator c;
     private void Start()
     {
         lerpSpeed = SpeedControl.speed;
@@ -23,8 +27,13 @@ public class Player :ItemPool
         }
         else
         {
-            StartCoroutine("PlayerNotificationCollider");
-            StartCoroutine(lifeBar.GetComponent<LifeControll>().lifeBarNotificationCollider());
+            p = PlayerNotificationCollider();
+            l = lifeBar.GetComponent<LifeControll>().lifeBarNotificationCollider();
+            c = lifeBar.GetComponent<LifeControll>().changeSizeBar();
+
+            StartCoroutine(p);
+            StartCoroutine(l);
+            StartCoroutine(c);
         }
     }
     private IEnumerator PlayerNotificationCollider()
@@ -38,5 +47,9 @@ public class Player :ItemPool
         yield return new WaitForSeconds(0.1f);
 
         GetComponent<Renderer>().material.color = col;
-    } 
+        
+        StopCoroutine(p);
+        StopCoroutine(l);
+        StopCoroutine(c);
+    }
 }

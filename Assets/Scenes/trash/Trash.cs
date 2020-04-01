@@ -14,7 +14,7 @@ public class Trash : ItemPool
     {
         if (other.tag == "Player")
         {
-            able = true;
+            Active = true;
         }
     }
 }

@@ -18,14 +18,10 @@ public class LifeControll : MonoBehaviour
         GetComponent<UnityEngine.UI.RawImage>().color = Color.red;
         yield return new WaitForSeconds(0.05f);
         GetComponent<UnityEngine.UI.RawImage>().color = Color.white;
-        yield return new WaitForSeconds(0.1f);
-        GetComponent<UnityEngine.UI.RawImage>().color = RawImagecol;
-
-        StartCoroutine("changeSizeBar");
-
-        yield return null;
+        yield return new WaitForSeconds(0.05f);
+        GetComponent<UnityEngine.UI.RawImage>().color = Color.green;
     }
-    private IEnumerator changeSizeBar()
+    public IEnumerator changeSizeBar()
     {
         float x = GetComponent<RectTransform>().localScale.x;
         float newX = x - 0.05f;
@@ -40,12 +36,12 @@ public class LifeControll : MonoBehaviour
         {
             gameOver.DOMove(new Vector3(), 0.5f);
         }
-
         yield return null;
     }
     void Update()
     {
-        if(DOTween.Complete(gameOver) == 1){
+        if (DOTween.Complete(gameOver) == 1)
+        {
             bt.pause();
             pause.SetActive(false);
         }

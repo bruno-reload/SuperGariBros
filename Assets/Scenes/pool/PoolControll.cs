@@ -7,19 +7,19 @@ public class PoolControll : MonoBehaviour
     public ItemPool[] PlayerPoolTarget;
     public ItemPool[] TrashPoolTarget;
 
-    public static Pool<ItemPool> playerPool;
-    public static Pool<ItemPool> trashPool;
+    public static Pool<ItemPool> poolPlayer;
+    public static Pool<ItemPool> poolTrash;
 
-    private void Start()
+    private void Awake()
     {
         ItemPool[] PPTBuff = new Player[PlayerPoolTarget.Length];
         ItemPool[] TPTBuff = new Trash[TrashPoolTarget.Length];
 
-        playerPool = new PoolPlayer();
-        trashPool = new PoolTrash();
+        poolPlayer = new PoolPlayer();
+        poolTrash = new PoolTrash();
 
-        (playerPool as PoolPlayer).Size = PlayerPoolTarget.Length;
-        (trashPool as PoolTrash).Size = TrashPoolTarget.Length;
+        (poolPlayer as PoolPlayer).Size = PlayerPoolTarget.Length;
+        (poolTrash as PoolTrash).Size = TrashPoolTarget.Length;
 
         for (int i = 0; i < PlayerPoolTarget.Length; i++)
         {
@@ -30,11 +30,13 @@ public class PoolControll : MonoBehaviour
             TPTBuff[i] = GameObject.Instantiate(TrashPoolTarget[i]);
         }
 
-        playerPool.addItems(PPTBuff);
-        trashPool.addItems(TPTBuff);
+        poolPlayer.addItems(PPTBuff);
+        poolTrash.addItems(TPTBuff);
 
-        trashPool.getItem(0).Able = true;
+        for (int i = 0; i < poolTrash.allItems().Length; i++)
+        {
+            poolTrash.outside(i);
+        }
+        poolTrash.inside(0);
     }
-
-
 }
