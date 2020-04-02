@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     DOTween.dll:
     - DG.Tweening.Core.DOTweenSettings
     SpawnReference.dll:
+    - Moviment
     - SpawnPlayer
     - SpawnRubbish
     Unity.2D.Animation.Editor.dll:
@@ -14,6 +15,8 @@ ScriptsOnlyBuild:
     - UnityEditor.Experimental.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
+    - UnityEditor.Tilemaps.GridPaletteBrushes
+    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Postprocessing.Runtime.dll:
@@ -56,10 +59,10 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.RawImage
     - UnityEngine.UI.Text
-    com.unity.multiplayer-hlapi.Runtime.dll:
-    - UnityEngine.Networking.NetworkCallbacks
     player.dll:
     - Player
+    pool.dll:
+    - PoolControll
     scroll.dll:
     - Scroll
     speedControl.dll:
@@ -112,29 +115,31 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11274}
+      Script: {instanceID: 11268}
     - Class: 114
-      Script: {instanceID: 11300}
+      Script: {instanceID: 11294}
     - Class: 114
-      Script: {instanceID: 11338}
+      Script: {instanceID: 11332}
     - Class: 114
-      Script: {instanceID: 11678}
+      Script: {instanceID: 11672}
     - Class: 114
-      Script: {instanceID: 11750}
+      Script: {instanceID: 11744}
     - Class: 114
-      Script: {instanceID: 11864}
+      Script: {instanceID: 11858}
     - Class: 114
-      Script: {instanceID: 11976}
+      Script: {instanceID: 11970}
     - Class: 114
-      Script: {instanceID: 12222}
+      Script: {instanceID: 12216}
     - Class: 114
-      Script: {instanceID: 12438}
+      Script: {instanceID: 12432}
     - Class: 114
-      Script: {instanceID: 12548}
+      Script: {instanceID: 12542}
     - Class: 114
-      Script: {instanceID: 12882}
+      Script: {instanceID: 12876}
     - Class: 114
-      Script: {instanceID: 13208}
+      Script: {instanceID: 13206}
+    - Class: 114
+      Script: {instanceID: 13224}
     - Class: 114
       Script: {instanceID: 13230}
     - Class: 114
@@ -144,23 +149,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13526}
     - Class: 114
-      Script: {instanceID: 14020}
+      Script: {instanceID: 14022}
     - Class: 114
-      Script: {instanceID: 14042}
+      Script: {instanceID: 14044}
     - Class: 114
-      Script: {instanceID: 14320}
+      Script: {instanceID: 14184}
     - Class: 114
-      Script: {instanceID: 14448}
+      Script: {instanceID: 14324}
     - Class: 114
-      Script: {instanceID: 14542}
+      Script: {instanceID: 14452}
     - Class: 114
-      Script: {instanceID: 14896}
+      Script: {instanceID: 14546}
     - Class: 114
-      Script: {instanceID: 14956}
+      Script: {instanceID: 14900}
     - Class: 114
-      Script: {instanceID: 15106}
+      Script: {instanceID: 14960}
     - Class: 114
-      Script: {instanceID: 15196}
+      Script: {instanceID: 15110}
+    - Class: 114
+      Script: {instanceID: 15200}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -530,7 +537,7 @@ ScriptsOnlyBuild:
     className: NoiseSettings
   - hash:
       serializedVersion: 2
-      Hash: 4d39bce02ec65615986a862d12edf9d7
+      Hash: 9ae84378fa1de0efae6e02949233155b
     assemblyName: SpawnReference.dll
     namespaceName: 
     className: SpawnPlayer
@@ -626,7 +633,7 @@ ScriptsOnlyBuild:
     className: NetworkTransformVisualizer
   - hash:
       serializedVersion: 2
-      Hash: 35e6ca6bcba0e1ff285588635522857e
+      Hash: 6bd997a96969461ddfa7e982a7d78bad
     assemblyName: SpawnReference.dll
     namespaceName: 
     className: SpawnRubbish
@@ -642,6 +649,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineOrbitalTransposer
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: item.dll
+    namespaceName: 
+    className: ItemPool
   - hash:
       serializedVersion: 2
       Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
@@ -708,6 +721,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: SpawnReference.dll
+    namespaceName: 
+    className: Moviment
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -920,7 +939,7 @@ ScriptsOnlyBuild:
     className: NetworkMigrationManager
   - hash:
       serializedVersion: 2
-      Hash: e2f93cc0057f8e1d1511112767390fdd
+      Hash: 284f5d9bdaed2e2fa4d300ea0adcd718
     assemblyName: trash.dll
     namespaceName: 
     className: Trash
@@ -948,6 +967,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.Experimental.U2D.IK
     className: FabrikSolver2D
+  - hash:
+      serializedVersion: 2
+      Hash: eac1bfa00694a8fec24c2df4b7639f91
+    assemblyName: pool.dll
+    namespaceName: 
+    className: PoolControll
   - hash:
       serializedVersion: 2
       Hash: 6225eb0973ab0af667bc5f9d1b1b18de
@@ -1076,7 +1101,7 @@ ScriptsOnlyBuild:
     className: NetworkAnimator
   - hash:
       serializedVersion: 2
-      Hash: 791ea8bd3aac39a5a6fc8b7eb5263862
+      Hash: 5b692ae8099e9d9b9fc9b810029aaa86
     assemblyName: player.dll
     namespaceName: 
     className: Player

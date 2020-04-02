@@ -71,7 +71,6 @@ public class SpawnRubbish : MonoBehaviour
         ItemPool obj = PoolControll.poolTrash.getItem(i);
         while (!obj.Able)
         {
-            Debug.Log(obj.name);
             float t = (this.speed * Time.deltaTime * 0.25f) / Vector3.Distance(obj.transform.position, avatarBuff[i]);
             obj.transform.position = Vector3.Lerp(PoolControll.poolTrash.getItem(i).transform.position, avatarBuff[i], t);
             yield return null;
