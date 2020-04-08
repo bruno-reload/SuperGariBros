@@ -1,5 +1,4 @@
 /home/bruno/Modelos/SuperGariBros/obj/Debug/ui.csprojAssemblyReference.cache
-/home/bruno/Modelos/SuperGariBros/obj/Debug/ui.csproj.CoreCompileInputs.cache
 /home/bruno/Modelos/SuperGariBros/obj/Debug/ui.dll
 /home/bruno/Modelos/SuperGariBros/obj/Debug/ui.pdb
 /home/bruno/Modelos/SuperGariBros/Temp/bin/Debug/ui.dll

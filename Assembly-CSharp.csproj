@@ -2,6 +2,8 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
+    <CscToolPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/Tools/RoslynScripts</CscToolPath>
+    <CscToolExe>unity_csc.sh</CscToolExe>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{1116a8dc-8d80-c6a6-4383-da56f14bb72e}</ProjectGuid>
+    <ProjectGuid>{DCA81611-808D-A6C6-4383-DA56F14BB72E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -45,6 +47,14 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="UnityEngine">
+      <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
@@ -53,8 +63,119 @@
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
      <None Include="Assets\Demigiant\DOTween\readme.txt" />
- <Reference Include="UnityEngine">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
+ <Reference Include="UnityEditor.TestRunner">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TestRunner">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Timeline.Editor">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Cinemachine">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Monetization">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/UnityEngine.Monetization.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Animation.Runtime">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.multiplayer-hlapi.Editor">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.VSCode.Editor">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro.Editor">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.IK.Editor">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.IK.Runtime">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Timeline">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Animation.Triangle.Runtime">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.CollabProxy.Editor">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Postprocessing.Editor">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.multiplayer-weaver.Editor">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.XR.LegacyInputHelpers">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Rider.Editor">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Mathematics">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.InternalAPIEngineBridge.001">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Sprite.Editor">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Common.Runtime">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Postprocessing.Runtime">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Tilemap.Editor">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Animation.Editor">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.SpatialTracking">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.cinemachine.editor">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpatialTracking">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Mathematics.Editor">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Common.Editor">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.DataPrivacy">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.XR.LegacyInputHelpers">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.InternalAPIEditorBridge.001">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.multiplayer-hlapi.Runtime">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -230,9 +351,6 @@
  <Reference Include="UnityEngine.XRModule">
  <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
- </Reference>
  <Reference Include="DOTween">
  <HintPath>/home/bruno/Modelos/SuperGariBros/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
  </Reference>
@@ -254,553 +372,392 @@
  <Reference Include="UnityEditor.iOS.Extensions.Common">
  <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
  </Reference>
- <Reference Include="mscorlib">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
- </Reference>
- <Reference Include="System">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.dll</HintPath>
- </Reference>
- <Reference Include="System.Core">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Core.dll</HintPath>
- </Reference>
- <Reference Include="System.Runtime.Serialization">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Runtime.Serialization.dll</HintPath>
- </Reference>
- <Reference Include="System.Xml">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Xml.dll</HintPath>
- </Reference>
- <Reference Include="System.Xml.Linq">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Xml.Linq.dll</HintPath>
- </Reference>
- <Reference Include="System.Numerics">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Numerics.dll</HintPath>
- </Reference>
- <Reference Include="System.Numerics.Vectors">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Numerics.Vectors.dll</HintPath>
- </Reference>
- <Reference Include="System.Net.Http">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Net.Http.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.CSharp">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Microsoft.CSharp.dll</HintPath>
- </Reference>
- <Reference Include="System.Data">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Data.dll</HintPath>
+ <Reference Include="netstandard">
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
  </Reference>
  <Reference Include="Microsoft.Win32.Primitives">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/Microsoft.Win32.Primitives.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/Microsoft.Win32.Primitives.dll</HintPath>
  </Reference>
  <Reference Include="System.AppContext">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.AppContext.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.AppContext.dll</HintPath>
  </Reference>
  <Reference Include="System.Collections.Concurrent">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.Concurrent.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.Concurrent.dll</HintPath>
  </Reference>
  <Reference Include="System.Collections.NonGeneric">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.NonGeneric.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.NonGeneric.dll</HintPath>
  </Reference>
  <Reference Include="System.Collections.Specialized">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.Specialized.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.Specialized.dll</HintPath>
  </Reference>
  <Reference Include="System.Collections">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.dll</HintPath>
- </Reference>
- <Reference Include="System.ComponentModel.Annotations">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.Annotations.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.dll</HintPath>
  </Reference>
  <Reference Include="System.ComponentModel.EventBasedAsync">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.EventBasedAsync.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.EventBasedAsync.dll</HintPath>
  </Reference>
  <Reference Include="System.ComponentModel.Primitives">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.Primitives.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.Primitives.dll</HintPath>
  </Reference>
  <Reference Include="System.ComponentModel.TypeConverter">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.TypeConverter.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.TypeConverter.dll</HintPath>
  </Reference>
  <Reference Include="System.ComponentModel">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.dll</HintPath>
  </Reference>
  <Reference Include="System.Console">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Console.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Console.dll</HintPath>
  </Reference>
  <Reference Include="System.Data.Common">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Data.Common.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Data.Common.dll</HintPath>
  </Reference>
  <Reference Include="System.Diagnostics.Contracts">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Contracts.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Contracts.dll</HintPath>
  </Reference>
  <Reference Include="System.Diagnostics.Debug">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Debug.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Debug.dll</HintPath>
  </Reference>
  <Reference Include="System.Diagnostics.FileVersionInfo">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.FileVersionInfo.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.FileVersionInfo.dll</HintPath>
  </Reference>
  <Reference Include="System.Diagnostics.Process">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Process.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Process.dll</HintPath>
  </Reference>
  <Reference Include="System.Diagnostics.StackTrace">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.StackTrace.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.StackTrace.dll</HintPath>
  </Reference>
  <Reference Include="System.Diagnostics.TextWriterTraceListener">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.TextWriterTraceListener.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.TextWriterTraceListener.dll</HintPath>
  </Reference>
  <Reference Include="System.Diagnostics.Tools">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Tools.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Tools.dll</HintPath>
  </Reference>
  <Reference Include="System.Diagnostics.TraceSource">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.TraceSource.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.TraceSource.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.Tracing">
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Tracing.dll</HintPath>
  </Reference>
  <Reference Include="System.Drawing.Primitives">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Drawing.Primitives.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Drawing.Primitives.dll</HintPath>
  </Reference>
  <Reference Include="System.Dynamic.Runtime">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Dynamic.Runtime.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Dynamic.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="System.Globalization.Calendars">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.Calendars.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Globalization.Calendars.dll</HintPath>
  </Reference>
  <Reference Include="System.Globalization.Extensions">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.Extensions.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Globalization.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="System.Globalization">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Globalization.dll</HintPath>
  </Reference>
  <Reference Include="System.IO.Compression.ZipFile">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.Compression.ZipFile.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.Compression.ZipFile.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.Compression">
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.Compression.dll</HintPath>
  </Reference>
  <Reference Include="System.IO.FileSystem.DriveInfo">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.DriveInfo.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.DriveInfo.dll</HintPath>
  </Reference>
  <Reference Include="System.IO.FileSystem.Primitives">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.Primitives.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.Primitives.dll</HintPath>
  </Reference>
  <Reference Include="System.IO.FileSystem.Watcher">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.Watcher.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.Watcher.dll</HintPath>
  </Reference>
  <Reference Include="System.IO.FileSystem">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.dll</HintPath>
  </Reference>
  <Reference Include="System.IO.IsolatedStorage">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.IsolatedStorage.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.IsolatedStorage.dll</HintPath>
  </Reference>
  <Reference Include="System.IO.MemoryMappedFiles">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.MemoryMappedFiles.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.MemoryMappedFiles.dll</HintPath>
  </Reference>
  <Reference Include="System.IO.Pipes">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.Pipes.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.Pipes.dll</HintPath>
  </Reference>
  <Reference Include="System.IO.UnmanagedMemoryStream">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.UnmanagedMemoryStream.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.UnmanagedMemoryStream.dll</HintPath>
  </Reference>
  <Reference Include="System.IO">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.dll</HintPath>
  </Reference>
  <Reference Include="System.Linq.Expressions">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Expressions.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.Expressions.dll</HintPath>
  </Reference>
  <Reference Include="System.Linq.Parallel">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Parallel.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.Parallel.dll</HintPath>
  </Reference>
  <Reference Include="System.Linq.Queryable">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Queryable.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.Queryable.dll</HintPath>
  </Reference>
  <Reference Include="System.Linq">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.dll</HintPath>
  </Reference>
- <Reference Include="System.Net.Http.Rtc">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Http.Rtc.dll</HintPath>
+ <Reference Include="System.Net.Http">
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Http.dll</HintPath>
  </Reference>
  <Reference Include="System.Net.NameResolution">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.NameResolution.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.NameResolution.dll</HintPath>
  </Reference>
  <Reference Include="System.Net.NetworkInformation">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.NetworkInformation.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.NetworkInformation.dll</HintPath>
  </Reference>
  <Reference Include="System.Net.Ping">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Ping.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Ping.dll</HintPath>
  </Reference>
  <Reference Include="System.Net.Primitives">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Primitives.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Primitives.dll</HintPath>
  </Reference>
  <Reference Include="System.Net.Requests">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Requests.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Requests.dll</HintPath>
  </Reference>
  <Reference Include="System.Net.Security">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Security.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Security.dll</HintPath>
  </Reference>
  <Reference Include="System.Net.Sockets">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Sockets.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Sockets.dll</HintPath>
  </Reference>
  <Reference Include="System.Net.WebHeaderCollection">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebHeaderCollection.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.WebHeaderCollection.dll</HintPath>
  </Reference>
  <Reference Include="System.Net.WebSockets.Client">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebSockets.Client.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.WebSockets.Client.dll</HintPath>
  </Reference>
  <Reference Include="System.Net.WebSockets">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebSockets.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.WebSockets.dll</HintPath>
  </Reference>
  <Reference Include="System.ObjectModel">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ObjectModel.dll</HintPath>
- </Reference>
- <Reference Include="System.Reflection.Emit.ILGeneration">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.ILGeneration.dll</HintPath>
- </Reference>
- <Reference Include="System.Reflection.Emit.Lightweight">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.Lightweight.dll</HintPath>
- </Reference>
- <Reference Include="System.Reflection.Emit">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ObjectModel.dll</HintPath>
  </Reference>
  <Reference Include="System.Reflection.Extensions">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Extensions.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Reflection.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="System.Reflection.Primitives">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Primitives.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Reflection.Primitives.dll</HintPath>
  </Reference>
  <Reference Include="System.Reflection">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Reflection.dll</HintPath>
  </Reference>
  <Reference Include="System.Resources.Reader">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.Reader.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Resources.Reader.dll</HintPath>
  </Reference>
  <Reference Include="System.Resources.ResourceManager">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.ResourceManager.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Resources.ResourceManager.dll</HintPath>
  </Reference>
  <Reference Include="System.Resources.Writer">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.Writer.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Resources.Writer.dll</HintPath>
  </Reference>
  <Reference Include="System.Runtime.CompilerServices.VisualC">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.CompilerServices.VisualC.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.CompilerServices.VisualC.dll</HintPath>
  </Reference>
  <Reference Include="System.Runtime.Extensions">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Extensions.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="System.Runtime.Handles">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Handles.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Handles.dll</HintPath>
  </Reference>
  <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
- </Reference>
- <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
  </Reference>
  <Reference Include="System.Runtime.InteropServices">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.InteropServices.dll</HintPath>
  </Reference>
  <Reference Include="System.Runtime.Numerics">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Numerics.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Numerics.dll</HintPath>
  </Reference>
  <Reference Include="System.Runtime.Serialization.Formatters">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Formatters.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Formatters.dll</HintPath>
  </Reference>
  <Reference Include="System.Runtime.Serialization.Json">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Json.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Json.dll</HintPath>
  </Reference>
  <Reference Include="System.Runtime.Serialization.Primitives">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Primitives.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Primitives.dll</HintPath>
  </Reference>
  <Reference Include="System.Runtime.Serialization.Xml">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Xml.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Xml.dll</HintPath>
  </Reference>
  <Reference Include="System.Runtime">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="System.Security.Claims">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Claims.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Claims.dll</HintPath>
  </Reference>
  <Reference Include="System.Security.Cryptography.Algorithms">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Algorithms.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Algorithms.dll</HintPath>
  </Reference>
  <Reference Include="System.Security.Cryptography.Csp">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Csp.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Csp.dll</HintPath>
  </Reference>
  <Reference Include="System.Security.Cryptography.Encoding">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Encoding.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Encoding.dll</HintPath>
  </Reference>
  <Reference Include="System.Security.Cryptography.Primitives">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Primitives.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Primitives.dll</HintPath>
  </Reference>
  <Reference Include="System.Security.Cryptography.X509Certificates">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.X509Certificates.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.X509Certificates.dll</HintPath>
  </Reference>
  <Reference Include="System.Security.Principal">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Principal.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Principal.dll</HintPath>
  </Reference>
  <Reference Include="System.Security.SecureString">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.SecureString.dll</HintPath>
- </Reference>
- <Reference Include="System.ServiceModel.Duplex">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Duplex.dll</HintPath>
- </Reference>
- <Reference Include="System.ServiceModel.Http">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Http.dll</HintPath>
- </Reference>
- <Reference Include="System.ServiceModel.NetTcp">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.NetTcp.dll</HintPath>
- </Reference>
- <Reference Include="System.ServiceModel.Primitives">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Primitives.dll</HintPath>
- </Reference>
- <Reference Include="System.ServiceModel.Security">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Security.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.SecureString.dll</HintPath>
  </Reference>
  <Reference Include="System.Text.Encoding.Extensions">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.Encoding.Extensions.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Text.Encoding.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="System.Text.Encoding">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.Encoding.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Text.Encoding.dll</HintPath>
  </Reference>
  <Reference Include="System.Text.RegularExpressions">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.RegularExpressions.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Text.RegularExpressions.dll</HintPath>
  </Reference>
  <Reference Include="System.Threading.Overlapped">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Overlapped.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Overlapped.dll</HintPath>
  </Reference>
  <Reference Include="System.Threading.Tasks.Parallel">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Tasks.Parallel.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Tasks.Parallel.dll</HintPath>
  </Reference>
  <Reference Include="System.Threading.Tasks">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Tasks.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Tasks.dll</HintPath>
  </Reference>
  <Reference Include="System.Threading.Thread">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Thread.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Thread.dll</HintPath>
  </Reference>
  <Reference Include="System.Threading.ThreadPool">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.ThreadPool.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.ThreadPool.dll</HintPath>
  </Reference>
  <Reference Include="System.Threading.Timer">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Timer.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Timer.dll</HintPath>
  </Reference>
  <Reference Include="System.Threading">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.dll</HintPath>
  </Reference>
  <Reference Include="System.ValueTuple">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ValueTuple.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ValueTuple.dll</HintPath>
  </Reference>
  <Reference Include="System.Xml.ReaderWriter">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.ReaderWriter.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.ReaderWriter.dll</HintPath>
  </Reference>
  <Reference Include="System.Xml.XDocument">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XDocument.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XDocument.dll</HintPath>
  </Reference>
  <Reference Include="System.Xml.XPath.XDocument">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XPath.XDocument.dll</HintPath>
  </Reference>
  <Reference Include="System.Xml.XPath">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XPath.dll</HintPath>
  </Reference>
  <Reference Include="System.Xml.XmlDocument">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XmlDocument.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XmlDocument.dll</HintPath>
  </Reference>
  <Reference Include="System.Xml.XmlSerializer">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XmlSerializer.dll</HintPath>
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XmlSerializer.dll</HintPath>
  </Reference>
- <Reference Include="netstandard">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/netstandard.dll</HintPath>
+ <Reference Include="System.Numerics.Vectors">
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/Extensions/2.0.0/System.Numerics.Vectors.dll</HintPath>
  </Reference>
- <Reference Include="UnityScript">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/UnityScript.dll</HintPath>
+ <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
  </Reference>
- <Reference Include="UnityScript.Lang">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/UnityScript.Lang.dll</HintPath>
+ <Reference Include="System.ComponentModel.Composition">
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.ComponentModel.Composition.dll</HintPath>
  </Reference>
- <Reference Include="Boo.Lang">
- <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
+ <Reference Include="System.Core">
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Core.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Data">
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Data.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Drawing">
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Drawing.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.Compression.FileSystem">
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.IO.Compression.FileSystem.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net">
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Net.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Numerics">
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Numerics.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Serialization">
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Runtime.Serialization.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ServiceModel.Web">
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.ServiceModel.Web.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Transactions">
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Transactions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Web">
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Web.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Windows">
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Windows.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.Linq">
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Linq.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.Serialization">
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml">
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.dll</HintPath>
+ </Reference>
+ <Reference Include="System">
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.dll</HintPath>
+ </Reference>
+ <Reference Include="mscorlib">
+ <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{3790fd87-d27a-3d6a-5bbd-3e9e58e08730}</Project>
-      <Name>UnityEditor.TestRunner</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{d4c162aa-4c06-1a62-4f34-5cc9633e51eb}</Project>
-      <Name>UnityEngine.TestRunner</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{f5875407-2d4a-4f88-f051-f44962dd4bcb}</Project>
-      <Name>Unity.Timeline.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Cinemachine.csproj">
-      <Project>{abd2f1b0-9306-f2ca-0445-7f71aa0e15db}</Project>
-      <Name>Cinemachine</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.Monetization.csproj">
-      <Project>{e2db1e28-bfce-28d8-29e5-aca6fe33bacd}</Project>
-      <Name>UnityEngine.Monetization</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Animation.Runtime.csproj">
-      <Project>{50da3e3d-d3f8-46af-eb25-b9f6362375f3}</Project>
-      <Name>Unity.2D.Animation.Runtime</Name>
-    </ProjectReference>
     <ProjectReference Include="ui.csproj">
-      <Project>{8953b994-97e2-9acb-0fe1-28df952c96fc}</Project>
+      <Project>{94B95389-E297-CB9A-0FE1-28DF952C96FC}</Project>
       <Name>ui</Name>
     </ProjectReference>
-    <ProjectReference Include="com.unity.multiplayer-hlapi.Editor.csproj">
-      <Project>{de0d9bef-9725-a0ff-d02e-f061160bb652}</Project>
-      <Name>com.unity.multiplayer-hlapi.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="loadScene.csproj">
-      <Project>{e5eb1fc1-9d62-c5b7-d4de-1b27cf2c43f4}</Project>
+      <Project>{C11FEBE5-629D-B7C5-D4DE-1B27CF2C43F4}</Project>
       <Name>loadScene</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.VSCode.Editor.csproj">
-      <Project>{5491d733-45a8-5ae7-c841-a950abdb0a99}</Project>
-      <Name>Unity.VSCode.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="SpawnReference.csproj">
-      <Project>{ef8ee87b-d0fa-7597-38c5-955c05e5a8a1}</Project>
+      <Project>{7BE88EEF-FAD0-9775-38C5-955C05E5A8A1}</Project>
       <Name>SpawnReference</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.Advertisements.csproj">
-      <Project>{f4b777d6-e528-9e06-849c-40b96f3f0133}</Project>
-      <Name>UnityEngine.Advertisements</Name>
-    </ProjectReference>
     <ProjectReference Include="item.csproj">
-      <Project>{76b53a9d-f8f2-b8b9-d2d3-b374a384633f}</Project>
+      <Project>{9D3AB576-F2F8-B9B8-D2D3-B374A384633F}</Project>
       <Name>item</Name>
     </ProjectReference>
     <ProjectReference Include="speedControl.csproj">
-      <Project>{f88ae434-27d5-9c84-cb8c-3749759eacd0}</Project>
+      <Project>{34E48AF8-D527-849C-CB8C-3749759EACD0}</Project>
       <Name>speedControl</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
-      <Project>{32f72057-5d3a-4bfd-fa87-48905049aaf4}</Project>
-      <Name>Unity.TextMeshPro.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.IK.Editor.csproj">
-      <Project>{2876b88d-d999-5e9f-2d4e-b59fe83cd989}</Project>
-      <Name>Unity.2D.IK.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="scroll.csproj">
-      <Project>{225899d3-609b-515b-2eac-278d28c8dffb}</Project>
+      <Project>{D3995822-9B60-5B51-2EAC-278D28C8DFFB}</Project>
       <Name>scroll</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.2D.IK.Runtime.csproj">
-      <Project>{2ea474ac-9011-1e24-a8c5-b36c1773bdf6}</Project>
-      <Name>Unity.2D.IK.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{ed3567c6-1d6f-03ce-bf6c-952d2b92da54}</Project>
-      <Name>UnityEngine.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{914f939a-a33f-19d1-7787-7329dfa64a4c}</Project>
-      <Name>Unity.Timeline</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Animation.Triangle.Runtime.csproj">
-      <Project>{b9f1a356-a363-7019-4ad0-7f2e03548347}</Project>
-      <Name>Unity.2D.Animation.Triangle.Runtime</Name>
-    </ProjectReference>
     <ProjectReference Include="trash.csproj">
-      <Project>{8022b0e2-61b7-44ce-a866-c26dff7a7241}</Project>
+      <Project>{E2B02280-B761-CE44-A866-C26DFF7A7241}</Project>
       <Name>trash</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.CollabProxy.Editor.csproj">
-      <Project>{ea85214f-5254-e3d6-7573-9eef8d250c50}</Project>
-      <Name>Unity.CollabProxy.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Postprocessing.Editor.csproj">
-      <Project>{3d5b80c5-507b-0072-41c5-cd776f8b2603}</Project>
-      <Name>Unity.Postprocessing.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="com.unity.multiplayer-weaver.Editor.csproj">
-      <Project>{872a7e66-b87d-81a5-4fc5-18bc2f5bac8d}</Project>
-      <Name>com.unity.multiplayer-weaver.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.XR.LegacyInputHelpers.csproj">
-      <Project>{fb00bb77-fd4b-7567-ebea-16d2aa524fbc}</Project>
-      <Name>UnityEngine.XR.LegacyInputHelpers</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Rider.Editor.csproj">
-      <Project>{de435b74-6f27-ceab-3aa9-6f1d4416e00b}</Project>
-      <Name>Unity.Rider.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{afd824d3-550a-8106-b1ba-404a90495610}</Project>
-      <Name>Unity.Mathematics</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj">
-      <Project>{e8628c35-77e8-c9de-4302-bfe3c7fcb2a8}</Project>
-      <Name>Unity.InternalAPIEngineBridge.001</Name>
-    </ProjectReference>
     <ProjectReference Include="player.csproj">
-      <Project>{cf28bdb7-ec7e-1067-8cd7-75907be37a78}</Project>
+      <Project>{B7BD28CF-7EEC-6710-8CD7-75907BE37A78}</Project>
       <Name>player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
-      <Project>{6a62dcf3-8551-810a-872d-c6d913c724ba}</Project>
-      <Name>Unity.2D.Sprite.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Common.Runtime.csproj">
-      <Project>{bdb0a9e9-76ec-fcd7-e0ee-763f36097978}</Project>
-      <Name>Unity.2D.Common.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
-      <Project>{ef04c7d4-6678-dc33-1802-436bef5bb364}</Project>
-      <Name>Unity.Postprocessing.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Tilemap.Editor.csproj">
-      <Project>{a258a7b1-f644-ee92-42d1-a8571af54735}</Project>
-      <Name>Unity.2D.Tilemap.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Animation.Editor.csproj">
-      <Project>{665e36c7-deb0-775e-38a0-0cf44e9dbe41}</Project>
-      <Name>Unity.2D.Animation.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEditor.SpatialTracking.csproj">
-      <Project>{13da423c-c2a3-caf4-a7ba-e81b9c93281a}</Project>
-      <Name>UnityEditor.SpatialTracking</Name>
-    </ProjectReference>
-    <ProjectReference Include="com.unity.cinemachine.editor.csproj">
-      <Project>{2105d9f9-8a72-cef1-07eb-1a3fdbac706b}</Project>
-      <Name>com.unity.cinemachine.editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.SpatialTracking.csproj">
-      <Project>{fb10713b-7c75-64bf-cb48-2a8d0bce98ee}</Project>
-      <Name>UnityEngine.SpatialTracking</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Mathematics.Editor.csproj">
-      <Project>{30105766-f76d-d21a-9317-4caf536d45de}</Project>
-      <Name>Unity.Mathematics.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="pool.csproj">
-      <Project>{d910c6df-3ce8-3a4f-7ba2-83c1a8560c5f}</Project>
+      <Project>{DFC610D9-E83C-4F3A-7BA2-83C1A8560C5F}</Project>
       <Name>pool</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{ca0075a9-f2c4-01f2-4a8e-022f9a8139e4}</Project>
-      <Name>Unity.TextMeshPro</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Common.Editor.csproj">
-      <Project>{1c75d95d-0abb-2d00-aa5a-90c364992b89}</Project>
-      <Name>Unity.2D.Common.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Analytics.DataPrivacy.csproj">
-      <Project>{ec9b4448-9de3-becf-5b2b-1f8f5257ae9b}</Project>
-      <Name>Unity.Analytics.DataPrivacy</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEditor.XR.LegacyInputHelpers.csproj">
-      <Project>{f47a1c72-b11a-ccd6-7f7c-51736e49053d}</Project>
-      <Name>UnityEditor.XR.LegacyInputHelpers</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.InternalAPIEditorBridge.001.csproj">
-      <Project>{8b1ebfb2-0b59-1b11-dfd9-8fdd2ddee7b4}</Project>
-      <Name>Unity.InternalAPIEditorBridge.001</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{a8dd9eff-823c-6a27-cf98-a708882bb0ce}</Project>
-      <Name>UnityEditor.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="com.unity.multiplayer-hlapi.Runtime.csproj">
-      <Project>{7e1615e8-7df9-f38a-893c-989ee8493c40}</Project>
-      <Name>com.unity.multiplayer-hlapi.Runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

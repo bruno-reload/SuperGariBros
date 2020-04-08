@@ -1,5 +1,4 @@
 /home/bruno/Modelos/SuperGariBros/obj/Debug/trash.csprojAssemblyReference.cache
-/home/bruno/Modelos/SuperGariBros/obj/Debug/trash.csproj.CoreCompileInputs.cache
 /home/bruno/Modelos/SuperGariBros/obj/Debug/trash.dll
 /home/bruno/Modelos/SuperGariBros/obj/Debug/trash.pdb
 /home/bruno/Modelos/SuperGariBros/Temp/bin/Debug/trash.dll
@@ -350,3 +349,4 @@
 /home/bruno/Modelos/SuperGariBros/Temp/bin/Debug/UnityEngine.ARModule.pdb
 /home/bruno/Modelos/SuperGariBros/Temp/bin/Debug/UnityEngine.ARModule.xml
 /home/bruno/Modelos/SuperGariBros/obj/Debug/trash.csproj.CopyComplete
+/home/bruno/Modelos/SuperGariBros/Temp/bin/Debug/item.pdb

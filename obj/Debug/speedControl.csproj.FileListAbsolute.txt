@@ -1,5 +1,4 @@
 /home/bruno/Modelos/SuperGariBros/obj/Debug/speedControl.csprojAssemblyReference.cache
-/home/bruno/Modelos/SuperGariBros/obj/Debug/speedControl.csproj.CoreCompileInputs.cache
 /home/bruno/Modelos/SuperGariBros/obj/Debug/speedControl.dll
 /home/bruno/Modelos/SuperGariBros/obj/Debug/speedControl.pdb
 /home/bruno/Modelos/SuperGariBros/Temp/bin/Debug/speedControl.dll

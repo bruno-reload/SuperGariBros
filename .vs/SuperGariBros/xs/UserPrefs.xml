@@ -1,35 +1,18 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/pool/PoolTrash.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/pool/PoolControll.cs">
     <Files>
-      <File FileName="Assets/Scenes/Moviment.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scenes/pool/PoolTrash.cs" Line="12" Column="6" />
-      <File FileName="Assets/Scenes/SpawnRubbish.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scenes/load/LoadScene.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scenes/player/Player.cs" Line="26" Column="30" />
+      <File FileName="Assets/Scenes/pool/Pool.cs" Line="13" Column="1" />
+      <File FileName="Assets/Scenes/pool/PoolControll.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperGariBros" expanded="True">
-            <Node name="loadScene" expanded="True">
-              <Node name="Assets" expanded="True">
-                <Node name="Scenes" expanded="True">
-                  <Node name="load" expanded="True" />
-                </Node>
-              </Node>
-            </Node>
-            <Node name="player" expanded="True">
-              <Node name="Assets" expanded="True">
-                <Node name="Scenes" expanded="True">
-                  <Node name="player" expanded="True" />
-                </Node>
-              </Node>
-            </Node>
-            <Node name="SpawnReference" expanded="True">
+            <Node name="pool" expanded="True">
               <Node name="Assets" expanded="True">
                 <Node name="Scenes" expanded="True">
                   <Node name="pool" expanded="True">
-                    <Node name="PoolTrash.cs" selected="True" />
+                    <Node name="PoolControll.cs" selected="True" />
                   </Node>
                 </Node>
               </Node>
@@ -37,13 +20,19 @@
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="SuperGariBros" expanded="True" selected="True" />
+        </State>
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.loadScene PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/home/bruno/Modelos/SuperGariBros/Assets/Scenes/pool/Pool.cs" relfile="Assets/Scenes/pool/Pool.cs" line="13" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
