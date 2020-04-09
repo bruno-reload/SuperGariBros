@@ -25,39 +25,27 @@ public class Player : ItemPool
     {
         if (combine == other.GetComponent<Trash>().type)
         {
-            animator.SetInteger("loopState", 2);
+            animator.ResetTrigger("run");
+            animator.ResetTrigger("change");
+            animator.ResetTrigger("idle");
+            animator.ResetTrigger("collision");
+            animator.SetTrigger("collect");
+
             pointsValue.GetComponent<Points>().addPoints();
         }
         else
         {
-            //p = PlayerNotificationCollider();
+            animator.ResetTrigger("collect");
+            animator.ResetTrigger("run");
+            animator.ResetTrigger("change");
+            animator.ResetTrigger("idle");
+            animator.SetTrigger("collision");
+            
             l = lifeBar.GetComponent<LifeControll>().lifeBarNotificationCollider();
             c = lifeBar.GetComponent<LifeControll>().changeSizeBar();
 
-            animator.SetInteger("loopState", 1);
-
-            //StartCoroutine(p);
             StartCoroutine(l);
             StartCoroutine(c);
         }
-        animator.SetInteger("loopState", 0);
-    }
-    private IEnumerator PlayerNotificationCollider()
-    {
-        Color col = GetComponentInChildren<Renderer>().material.color;
-
-        GetComponent<Renderer>().material.color = Color.red;
-        yield return new WaitForSeconds(0.05f);
-
-        GetComponent<Renderer>().material.color = Color.white;
-        yield return new WaitForSeconds(0.1f);
-
-        GetComponent<Renderer>().material.color = col;
-
-        StopCoroutine(p);
-        StopCoroutine(l);
-        StopCoroutine(c);
-
-        animator.SetInteger("loopState", 0);
     }
 }
