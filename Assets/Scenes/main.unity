@@ -528,6 +528,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
+--- !u!1 &378691715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 378691717}
+  - component: {fileID: 378691716}
+  m_Layer: 0
+  m_Name: moviment
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &378691716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378691715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e74c50a764c1a71a996a8e75ee057767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &378691717
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378691715}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.840702, y: -10.116846, z: -13.089844}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &393220720
 GameObject:
   m_ObjectHideFlags: 0
@@ -1517,7 +1560,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169666437}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.39, y: 5.59, z: 0}
+  m_LocalPosition: {x: 13.98, y: 5.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1892,7 +1935,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1380640155}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.37, y: -1.24, z: 0}
+  m_LocalPosition: {x: -5.53, y: -2.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2063,9 +2106,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerPoolTarget:
-  - {fileID: 18478739562903297, guid: 17fdd4351cb2b447a8ba1b4bfc9a30c8, type: 3}
-  - {fileID: 3019618060343743811, guid: cff83546c0fb47d9e8aa5ab7d7819cc5, type: 3}
-  - {fileID: -1062742699964736131, guid: 07257ee8d0795052a8ab338a01dd2670, type: 3}
+  - {fileID: -6837758733075250064, guid: 2f0e8597a60758b3687982974282d836, type: 3}
+  - {fileID: -6541785037149961297, guid: a28b45d9023c64d8c9b1825344de3881, type: 3}
+  - {fileID: -4351730110144164890, guid: 041bd4b773bf086ff82e1c27fa485700, type: 3}
   TrashPoolTarget:
   - {fileID: 6247056688126354564, guid: c8e453e40d87efaa3989d6d07b59d592, type: 3}
   - {fileID: 1449561074550480472, guid: 5ad38ce685c7f481bb55d7660b032086, type: 3}
@@ -2082,7 +2125,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1594962771
 GameObject:

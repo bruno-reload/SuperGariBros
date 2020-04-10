@@ -8,7 +8,6 @@ public class Player : ItemPool
     private GameObject lifeBar;
     private GameObject pointsValue;
     private float lerpSpeed;
-    private Animator animator;
     public bool bottomLane = false;
 
     private IEnumerator p;
@@ -19,33 +18,38 @@ public class Player : ItemPool
         lerpSpeed = SpeedControl.speed;
         lifeBar = GameObject.Find("Canvas/lifeBar/life");
         pointsValue = GameObject.Find("Canvas/pointBar/value");
-        animator = GetComponentInChildren<Animator>();
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (combine == other.GetComponent<Trash>().type)
         {
-            animator.ResetTrigger("run");
-            animator.ResetTrigger("change");
-            animator.ResetTrigger("idle");
-            animator.ResetTrigger("collision");
-            animator.SetTrigger("collect");
-
             pointsValue.GetComponent<Points>().addPoints();
         }
         else
         {
-            animator.ResetTrigger("collect");
-            animator.ResetTrigger("run");
-            animator.ResetTrigger("change");
-            animator.ResetTrigger("idle");
-            animator.SetTrigger("collision");
-            
+            p = PlayerNotificationCollider();
             l = lifeBar.GetComponent<LifeControll>().lifeBarNotificationCollider();
             c = lifeBar.GetComponent<LifeControll>().changeSizeBar();
 
+            StartCoroutine(p);
             StartCoroutine(l);
             StartCoroutine(c);
         }
+    }
+    private IEnumerator PlayerNotificationCollider()
+    {
+        Color col = GetComponent<Renderer>().material.color;
+
+        GetComponent<Renderer>().material.color = Color.red;
+        yield return new WaitForSeconds(0.05f);
+
+        GetComponent<Renderer>().material.color = Color.white;
+        yield return new WaitForSeconds(0.1f);
+
+        GetComponent<Renderer>().material.color = col;
+        
+        StopCoroutine(p);
+        StopCoroutine(l);
+        StopCoroutine(c);
     }
 }

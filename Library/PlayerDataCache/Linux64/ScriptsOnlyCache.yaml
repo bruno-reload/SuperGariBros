@@ -537,7 +537,7 @@ ScriptsOnlyBuild:
     className: NoiseSettings
   - hash:
       serializedVersion: 2
-      Hash: 9ae84378fa1de0efae6e02949233155b
+      Hash: be5d417999eeb19dcaee62988bc3c3a9
     assemblyName: SpawnReference.dll
     namespaceName: 
     className: SpawnPlayer
