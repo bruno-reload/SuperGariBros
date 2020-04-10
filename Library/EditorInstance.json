@@ -1,5 +1,13 @@
 {
-	"process_id" : 2778,
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+	"process_id" : 28890,
+=======
+	"process_id" : 8764,
+>>>>>>> bruno-reload
+=======
+	"process_id" : 29733,
+>>>>>>> Stashed changes
 	"version" : "2019.3.7f1",
 	"app_path" : "/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Unity",
 	"app_contents_path" : "/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data"

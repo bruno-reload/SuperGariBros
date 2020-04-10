@@ -1953,10 +1953,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 206a6874570fc098e92a6171d199e081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avatarsPrefabs:
-  - {fileID: 710288082444200547, guid: 2f0e8597a60758b3687982974282d836, type: 3}
-  - {fileID: 4356376791625446938, guid: a28b45d9023c64d8c9b1825344de3881, type: 3}
-  - {fileID: 1692309889918448645, guid: 041bd4b773bf086ff82e1c27fa485700, type: 3}
   foward: 0.5
   spawnRot: 0
   rotationAvatars: 290
