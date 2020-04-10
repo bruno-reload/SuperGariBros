@@ -45,6 +45,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scenes\Moviment.cs" />
      <Compile Include="Assets\Scenes\SpawnPlayer.cs" />
      <Compile Include="Assets\Scenes\SpawnRubbish.cs" />
  <Reference Include="UnityEngine">
