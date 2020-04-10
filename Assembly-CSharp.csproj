@@ -233,6 +233,36 @@
  <Reference Include="UnityEditor">
  <HintPath>/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
  </Reference>
+ <Reference Include="Cinemachine">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Monetization">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/UnityEngine.Monetization.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.multiplayer-hlapi.Editor">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.IK.Editor">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.IK.Runtime">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.multiplayer-weaver.Editor">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.cinemachine.editor">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.DataPrivacy">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.multiplayer-hlapi.Runtime">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+ </Reference>
  <Reference Include="DOTween">
  <HintPath>/home/bruno/Modelos/SuperGariBros/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
  </Reference>
@@ -244,6 +274,9 @@
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
  <HintPath>/home/bruno/Modelos/SuperGariBros/Library/PackageCache/com.unity.analytics@3.3.5/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Purchasing">
+ <HintPath>/home/bruno/Modelos/SuperGariBros/Library/PackageCache/com.unity.purchasing@2.0.6/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
  <HintPath>/home/bruno/Modelos/SuperGariBros/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
@@ -613,14 +646,6 @@
       <Project>{f5875407-2d4a-4f88-f051-f44962dd4bcb}</Project>
       <Name>Unity.Timeline.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Cinemachine.csproj">
-      <Project>{abd2f1b0-9306-f2ca-0445-7f71aa0e15db}</Project>
-      <Name>Cinemachine</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.Monetization.csproj">
-      <Project>{e2db1e28-bfce-28d8-29e5-aca6fe33bacd}</Project>
-      <Name>UnityEngine.Monetization</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.2D.Animation.Runtime.csproj">
       <Project>{50da3e3d-d3f8-46af-eb25-b9f6362375f3}</Project>
       <Name>Unity.2D.Animation.Runtime</Name>
@@ -628,10 +653,6 @@
     <ProjectReference Include="ui.csproj">
       <Project>{8953b994-97e2-9acb-0fe1-28df952c96fc}</Project>
       <Name>ui</Name>
-    </ProjectReference>
-    <ProjectReference Include="com.unity.multiplayer-hlapi.Editor.csproj">
-      <Project>{de0d9bef-9725-a0ff-d02e-f061160bb652}</Project>
-      <Name>com.unity.multiplayer-hlapi.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="loadScene.csproj">
       <Project>{e5eb1fc1-9d62-c5b7-d4de-1b27cf2c43f4}</Project>
@@ -645,10 +666,6 @@
       <Project>{ef8ee87b-d0fa-7597-38c5-955c05e5a8a1}</Project>
       <Name>SpawnReference</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.Advertisements.csproj">
-      <Project>{f4b777d6-e528-9e06-849c-40b96f3f0133}</Project>
-      <Name>UnityEngine.Advertisements</Name>
-    </ProjectReference>
     <ProjectReference Include="item.csproj">
       <Project>{76b53a9d-f8f2-b8b9-d2d3-b374a384633f}</Project>
       <Name>item</Name>
@@ -661,17 +678,9 @@
       <Project>{32f72057-5d3a-4bfd-fa87-48905049aaf4}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.2D.IK.Editor.csproj">
-      <Project>{2876b88d-d999-5e9f-2d4e-b59fe83cd989}</Project>
-      <Name>Unity.2D.IK.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="scroll.csproj">
       <Project>{225899d3-609b-515b-2eac-278d28c8dffb}</Project>
       <Name>scroll</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.IK.Runtime.csproj">
-      <Project>{2ea474ac-9011-1e24-a8c5-b36c1773bdf6}</Project>
-      <Name>Unity.2D.IK.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{ed3567c6-1d6f-03ce-bf6c-952d2b92da54}</Project>
@@ -696,10 +705,6 @@
     <ProjectReference Include="Unity.Postprocessing.Editor.csproj">
       <Project>{3d5b80c5-507b-0072-41c5-cd776f8b2603}</Project>
       <Name>Unity.Postprocessing.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="com.unity.multiplayer-weaver.Editor.csproj">
-      <Project>{872a7e66-b87d-81a5-4fc5-18bc2f5bac8d}</Project>
-      <Name>com.unity.multiplayer-weaver.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.XR.LegacyInputHelpers.csproj">
       <Project>{fb00bb77-fd4b-7567-ebea-16d2aa524fbc}</Project>
@@ -745,10 +750,6 @@
       <Project>{13da423c-c2a3-caf4-a7ba-e81b9c93281a}</Project>
       <Name>UnityEditor.SpatialTracking</Name>
     </ProjectReference>
-    <ProjectReference Include="com.unity.cinemachine.editor.csproj">
-      <Project>{2105d9f9-8a72-cef1-07eb-1a3fdbac706b}</Project>
-      <Name>com.unity.cinemachine.editor</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEngine.SpatialTracking.csproj">
       <Project>{fb10713b-7c75-64bf-cb48-2a8d0bce98ee}</Project>
       <Name>UnityEngine.SpatialTracking</Name>
@@ -769,10 +770,6 @@
       <Project>{1c75d95d-0abb-2d00-aa5a-90c364992b89}</Project>
       <Name>Unity.2D.Common.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Analytics.DataPrivacy.csproj">
-      <Project>{ec9b4448-9de3-becf-5b2b-1f8f5257ae9b}</Project>
-      <Name>Unity.Analytics.DataPrivacy</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEditor.XR.LegacyInputHelpers.csproj">
       <Project>{f47a1c72-b11a-ccd6-7f7c-51736e49053d}</Project>
       <Name>UnityEditor.XR.LegacyInputHelpers</Name>
@@ -784,10 +781,6 @@
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{a8dd9eff-823c-6a27-cf98-a708882bb0ce}</Project>
       <Name>UnityEditor.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="com.unity.multiplayer-hlapi.Runtime.csproj">
-      <Project>{7e1615e8-7df9-f38a-893c-989ee8493c40}</Project>
-      <Name>com.unity.multiplayer-hlapi.Runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
