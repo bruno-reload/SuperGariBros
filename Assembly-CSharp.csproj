@@ -62,6 +62,13 @@
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+     <Compile Include="Assets\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
+     <None Include="Assets\!My Assets\True 8-Bit Music\Streets\Waveform guide.txt" />
+     <None Include="Assets\!My Assets\True 8-Bit Music\Stage Select\Waveform guide.txt" />
+     <None Include="Assets\!My Assets\True 8-Bit Music\Gridlock\Waveform guide.txt" />
+     <None Include="Assets\!My Assets\True 8-Bit Music\Winter\Waveform guide.txt" />
+     <None Include="Assets\!My Assets\True 8-Bit Music\Noon\Waveform guide.txt" />
+     <None Include="Assets\!My Assets\True 8-Bit Music\Fields\Waveform guide.txt" />
      <None Include="Assets\Demigiant\DOTween\readme.txt" />
  <Reference Include="UnityEditor.TestRunner">
  <HintPath>/home/bruno/Modelos/SuperGariBros/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
@@ -754,6 +761,10 @@
     <ProjectReference Include="pool.csproj">
       <Project>{DFC610D9-E83C-4F3A-7BA2-83C1A8560C5F}</Project>
       <Name>pool</Name>
+    </ProjectReference>
+    <ProjectReference Include="sound.csproj">
+      <Project>{4A57318B-B1BB-35F0-52EE-15209DCEEA3F}</Project>
+      <Name>sound</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -656,6 +656,10 @@
       <Project>{9D3AB576-F2F8-B9B8-D2D3-B374A384633F}</Project>
       <Name>item</Name>
     </ProjectReference>
+    <ProjectReference Include="sound.csproj">
+      <Project>{4A57318B-B1BB-35F0-52EE-15209DCEEA3F}</Project>
+      <Name>sound</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

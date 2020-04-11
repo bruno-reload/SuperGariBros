@@ -4,7 +4,8 @@
         "trash",
         "ui",
         "speedControl",
-        "item"
+        "item",
+        "sound"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
