@@ -1,5 +1,13 @@
 {
+<<<<<<< HEAD
 	"process_id" : 3586,
+=======
+<<<<<<< HEAD
+	"process_id" : 2329,
+=======
+	"process_id" : 20394,
+>>>>>>> bruno-reload
+>>>>>>> e7e128bc312a4490256524983e13db962ae67785
 	"version" : "2019.3.7f1",
 	"app_path" : "/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Unity",
 	"app_contents_path" : "/media/bruno/18af7648-b34b-4cdb-81ac-4a19cb1b4670/programa/unity/2019.3.7f1/Editor/Data"
