@@ -21,6 +21,7 @@ public class SoundController : MonoBehaviour
         count += Time.deltaTime * 0.1f;
 
         audioSource.volume = Mathf.Lerp(0.0f, volume, count);
+        audioSource.loop = true;
 
     }
 }
