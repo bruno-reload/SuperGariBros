@@ -44,6 +44,8 @@ public class Player : ItemPool
         {
             foreach (Sound item in sounds)
             {
+
+                animator.SetBool("runing", true);
                 if (item.name == "walk") item.play();
             }
         }
@@ -51,6 +53,7 @@ public class Player : ItemPool
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        animator.SetBool("runing", false);
         startTime = Time.time;
         if (combine == other.GetComponent<Trash>().type)
         {

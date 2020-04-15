@@ -49,11 +49,7 @@ public class SpawnPlayer : MonoBehaviour
         {
             foreach (Animator item in animator)
             {
-                item.ResetTrigger("collect");
-                item.ResetTrigger("collision");
-                item.ResetTrigger("idle");
-                item.ResetTrigger("run");
-                item.SetTrigger("change");
+                item.SetBool("runing", false);
             }
             swapPosition();
             for (int i = 0; i < size; i++)
@@ -61,10 +57,6 @@ public class SpawnPlayer : MonoBehaviour
                 moviment[i] = moveToTarget(i);
                 StartCoroutine(moviment[i]);
             }
-        }
-        foreach (Animator item in animator)
-        {
-            item.SetTrigger("run");
         }
     }
     private void swapPosition()
@@ -114,7 +106,7 @@ public class SpawnPlayer : MonoBehaviour
         {
             inAnimation = false;
         }
-        animator[i].SetTrigger("run");
+        animator[i].SetBool("runing", true);
         StopCoroutine(moviment[i]);
     }
 }
