@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Player : ItemPool
 {
-
     [SerializeField]
     public Sound[] sounds;
     public TrashType combine;
@@ -17,12 +16,11 @@ public class Player : ItemPool
     private IEnumerator l;
     private IEnumerator c;
     private IEnumerator w;
-
+    private bool idle = false;
     private float startTime = 0;
     private float clipTime = 0;
     private void Start()
     {
-
         lerpSpeed = SpeedControl.speed;
         lifeBar = GameObject.Find("Canvas/lifeBar/life");
         pointsValue = GameObject.Find("Canvas/pointBar/value");
@@ -47,8 +45,16 @@ public class Player : ItemPool
                 if (item.name == "walk") item.play();
             }
         }
+        if (idle)
+        {
+            animator.SetTrigger("idle");
+            idle = false;
+        }
     }
-
+    public void playIdle()
+    {
+        idle = true;
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         startTime = Time.time;
@@ -61,7 +67,6 @@ public class Player : ItemPool
             animator.SetTrigger("collect");
 
             pointsValue.GetComponent<Points>().addPoints();
-
         }
         else
         {
@@ -70,7 +75,6 @@ public class Player : ItemPool
                 if (item.name == "collision") clipTime = item.oneShotPlay();
             }
             animator.SetTrigger("collision");
-
 
             l = lifeBar.GetComponent<LifeControll>().lifeBarNotificationCollider();
             c = lifeBar.GetComponent<LifeControll>().changeSizeBar();

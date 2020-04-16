@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Timers;
 using UnityEditor;
 using UnityEngine;
 
 public class SpawnPlayer : MonoBehaviour
 {
+    public delegate void ElapsedEventHandler(object sender, ElapsedEventArgs e);
     public float foward;
     private Animator[] animator;
     private bool inAnimation = false;
@@ -16,8 +18,18 @@ public class SpawnPlayer : MonoBehaviour
     private int size = 0;
     private IEnumerator[] moviment;
     private Vector3[] buffPosition;
+    private Timer aTimer;
+    private int randSelect = 0;
+    private string nameAnim = "runing";
     void Start()
     {
+        aTimer = new Timer(32000);
+
+        aTimer.Elapsed += OnTimedEvent;
+
+        aTimer.AutoReset = true;
+
+        aTimer.Enabled = true;
 
         size = PoolControll.poolPlayer.allItems().Length;
         animator = new Animator[size];
@@ -27,6 +39,22 @@ public class SpawnPlayer : MonoBehaviour
         setStartPos();
 
         transform.localRotation = Quaternion.Euler(0.0f, 0.0f, spawnRot);
+    }
+    private void OnTimedEvent(object sender, ElapsedEventArgs e)
+    {
+        try
+        {
+            foreach (Animator item in animator)
+            {
+                if (nameAnim == "runing")
+                    (PoolControll.poolPlayer.getItem(randSelect) as Player).playIdle();
+            }
+        }
+        catch (System.Exception error)
+        {
+            Debug.Log(error);
+            throw;
+        }
     }
     private void setStartPos()
     {
@@ -49,6 +77,7 @@ public class SpawnPlayer : MonoBehaviour
         {
             foreach (Animator item in animator)
             {
+                nameAnim = "";
                 item.SetBool("runing", false);
             }
             swapPosition();
@@ -58,6 +87,7 @@ public class SpawnPlayer : MonoBehaviour
                 StartCoroutine(moviment[i]);
             }
         }
+        randSelect = Random.Range(0, size);
     }
     private void swapPosition()
     {
@@ -107,6 +137,7 @@ public class SpawnPlayer : MonoBehaviour
             inAnimation = false;
         }
         animator[i].SetBool("runing", true);
+        nameAnim = "runing";
         StopCoroutine(moviment[i]);
     }
 }
