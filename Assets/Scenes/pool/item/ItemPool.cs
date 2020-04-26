@@ -8,7 +8,8 @@ public class ItemPool : MonoBehaviour
     {
         set { able = value; }
         get { return able; }
-    }public bool Active
+    }
+    public bool Active
     {
         set { active = value; }
         get { return active; }
