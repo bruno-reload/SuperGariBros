@@ -23,8 +23,35 @@ Material:
         m_Texture: {fileID: 2800000, guid: 3cebd8fac0aa86b7397ec1cb2e81cb89, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _TextureBuff:
+        m_Texture: {fileID: 2800000, guid: 9e7865027b949658d9032de254ce8ba9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureIn:
+        m_Texture: {fileID: 2800000, guid: 3cebd8fac0aa86b7397ec1cb2e81cb89, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texture2:
+        m_Texture: {fileID: 2800000, guid: 9e7865027b949658d9032de254ce8ba9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _textureBuff:
+        m_Texture: {fileID: 2800000, guid: 9e7865027b949658d9032de254ce8ba9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Factor: 1
+    - _Blender: 1
+    - _Enable: 0.38
+    - _Factor: 0.47
+    - _Light: 0.45
+    - _Ligth: 1
+    - _MoveSplit: 0.65
+    - _Sinterpolation: 0.11
+    - _Speed: 0.01
+    - _SplitScreem: 0.78
+    - _UVMap: 0.56
+    - _UVXFactor: 0
+    - _light: 0
     m_Colors:
     - Nome: {r: 1, g: 1, b: 0, a: 1}
     - _Colour: {r: 1, g: 1, b: 1, a: 1}
